@@ -5,6 +5,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "examples:js": "node examples/js/run-all.mjs",
     "test": "node scripts/test-all-days.mjs",
     "test:all": "node scripts/test-all-days.mjs",
     "day-01": "node days/day-01-web-platform-git/tasks/run-all.js",
