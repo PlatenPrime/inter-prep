@@ -1,0 +1,7 @@
+/* 020 — order */
+
+.order-row { display: flex; gap: 0.5rem; }
+.order-row > div { padding: 0.5rem 1rem; background: #e9d5ff; border-radius: 0.25rem; font-size: 0.75rem; }
+.order-a { order: 2; }
+.order-b { order: 1; }
+.order-c { order: 0; }

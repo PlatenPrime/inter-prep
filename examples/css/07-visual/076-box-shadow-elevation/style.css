@@ -1,0 +1,7 @@
+/* 076 — Elevation shadows */
+
+.elev { display: flex; gap: 1rem; }
+.elev > div { width: 64px; height: 64px; background: #fff; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 0.875rem; }
+.e1 { box-shadow: 0 1px 2px rgb(0 0 0 / 8%); }
+.e2 { box-shadow: 0 4px 12px rgb(0 0 0 / 12%); }
+.e3 { box-shadow: 0 12px 28px rgb(0 0 0 / 18%); }

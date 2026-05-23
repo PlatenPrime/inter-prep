@@ -1,0 +1,38 @@
+<!--
+  054 — Container queries
+  @tags responsive, container
+  @difficulty medium
+
+  @container: стили от ширины родителя, не viewport.
+  На собесе: container-type: inline-size; cqw units.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>054 — Container queries (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>054 — Container queries</h1>
+      <p class="demo-task">@container: стили от ширины родителя, не viewport.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">responsive, container</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <p class="text-xs text-slate-500 mb-2">@container — use @container in CSS; Tailwind v4 @container class</p><div class="@container max-w-full resize overflow-auto p-2 border border-dashed border-slate-400"><div class="p-3 bg-fuchsia-100 rounded text-xs @[280px]:grid @[280px]:grid-cols-2">Container query card</div></div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> @container @[280px]: — Tailwind container queries</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

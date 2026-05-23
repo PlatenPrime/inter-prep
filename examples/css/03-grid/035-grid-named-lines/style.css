@@ -1,0 +1,4 @@
+/* 035 — Named grid lines */
+
+.named { display: grid; grid-template-columns: [edge-start] 1fr [content-start] 2fr [content-end] 1fr [edge-end]; gap: 0.25rem; min-height: 80px; background: #f1f5f9; padding: 0.25rem; }
+.named .cell { grid-column: content-start / content-end; background: #60a5fa; color: #fff; padding: 1rem; border-radius: 0.25rem; font-size: 0.75rem; text-align: center; }

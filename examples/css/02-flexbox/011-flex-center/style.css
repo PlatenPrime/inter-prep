@@ -1,0 +1,4 @@
+/* 011 — Flex center 2D */
+
+.flex-center-parent { display: flex; justify-content: center; align-items: center; min-height: 180px; background: #e2e8f0; border-radius: 0.5rem; }
+.flex-center-child { padding: 1rem 1.5rem; background: #2563eb; color: #fff; border-radius: 0.375rem; font-weight: 600; }

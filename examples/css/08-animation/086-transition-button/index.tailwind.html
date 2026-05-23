@@ -1,0 +1,38 @@
+<!--
+  086 — Transition on hover
+  @tags animation, transition
+  @difficulty easy
+
+  Плавный hover через transition.
+  На собесе: transition-property, duration, easing.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>086 — Transition on hover (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>086 — Transition on hover</h1>
+      <p class="demo-task">Плавный hover через transition.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">animation, transition</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <button type="button" class="px-5 py-2.5 bg-blue-600 text-white rounded-lg border-0 cursor-pointer text-sm transition hover:bg-blue-700 hover:-translate-y-0.5">Hover</button>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> transition hover:-translate-y-0.5</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

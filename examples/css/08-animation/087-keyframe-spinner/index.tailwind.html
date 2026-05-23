@@ -1,0 +1,38 @@
+<!--
+  087 — Keyframe spinner
+  @tags animation
+  @difficulty easy
+
+  @keyframes rotate для loader.
+  На собесе: transform лучше чем rotate property для perf.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>087 — Keyframe spinner (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>087 — Keyframe spinner</h1>
+      <p class="demo-task">@keyframes rotate для loader.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">animation</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="w-8 h-8 border-3 border-slate-200 border-t-blue-600 rounded-full animate-spin" aria-label="Loading"></div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> animate-spin</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!--
+  009 — Overflow
+  @tags fundamentals, overflow
+  @difficulty easy
+
+  overflow: auto появляет скролл только при переполнении.
+  На собесе: overflow и BFC; scroll chaining; overscroll-behavior.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>009 — Overflow (Pure CSS)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>009 — Overflow</h1>
+      <p class="demo-task">overflow: auto появляет скролл только при переполнении.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">fundamentals, overflow</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Pure CSS</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="overflow-box">Длинный текст внутри фиксированной высоты — появится вертикальный скролл только когда контент не помещается. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
+    </div>
+    
+    
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+/* 025 — Sidebar flex:1 */
+
+.sidebar-layout { display: flex; gap: 0.5rem; min-height: 120px; }
+.sidebar-layout aside { flex: 0 0 120px; padding: 0.75rem; background: #334155; color: #fff; font-size: 0.75rem; border-radius: 0.25rem; }
+.sidebar-layout main { flex: 1; padding: 0.75rem; background: #e2e8f0; font-size: 0.75rem; border-radius: 0.25rem; }

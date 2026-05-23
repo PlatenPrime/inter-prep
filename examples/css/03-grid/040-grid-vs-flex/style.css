@@ -1,0 +1,7 @@
+/* 040 — Grid vs Flex when */
+
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.flex-1d { display: flex; gap: 0.35rem; padding: 0.5rem; background: #dbeafe; border-radius: 0.375rem; }
+.flex-1d span { flex: 1; padding: 0.5rem; background: #3b82f6; color: #fff; font-size: 0.7rem; text-align: center; border-radius: 0.25rem; }
+.grid-2d { display: grid; grid-template-columns: 1fr 1fr; gap: 0.35rem; padding: 0.5rem; background: #dcfce7; border-radius: 0.375rem; }
+.grid-2d span { padding: 0.5rem; background: #16a34a; color: #fff; font-size: 0.7rem; text-align: center; border-radius: 0.25rem; }

@@ -1,0 +1,38 @@
+<!--
+  047 — Sticky table header
+  @tags position, table
+  @difficulty medium
+
+  thead sticky при скролле таблицы.
+  На собесе: position sticky на th; border-collapse.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>047 — Sticky table header (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>047 — Sticky table header</h1>
+      <p class="demo-task">thead sticky при скролле таблицы.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">position, table</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="max-h-[120px] overflow-auto border border-slate-200 rounded-lg"><table class="w-full text-xs border-collapse"><thead><tr><th class="sticky top-0 bg-slate-700 text-white p-2 text-left">Name</th><th class="sticky top-0 bg-slate-700 text-white p-2 text-left">Role</th></tr></thead><tbody><tr><td class="p-2 border-b border-slate-200">Ann</td><td class="p-2 border-b border-slate-200">Dev</td></tr><tr><td class="p-2 border-b border-slate-200">Bo</td><td class="p-2 border-b border-slate-200">Design</td></tr><tr><td class="p-2 border-b border-slate-200">Cy</td><td class="p-2 border-b border-slate-200">PM</td></tr><tr><td class="p-2 border-b border-slate-200">Di</td><td class="p-2 border-b border-slate-200">QA</td></tr></tbody></table></div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> sticky top-0 on th</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

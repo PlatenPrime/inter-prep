@@ -1,0 +1,4 @@
+/* 072 — Tabular numbers */
+
+.nums { font-variant-numeric: tabular-nums; font-size: 0.875rem; border-collapse: collapse; }
+.nums td { padding: 0.35rem 1rem; border: 1px solid #e2e8f0; text-align: right; }

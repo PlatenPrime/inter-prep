@@ -1,0 +1,4 @@
+/* 089 — animation-fill-mode */
+
+.fill-box { width: 80px; padding: 0.75rem; background: #14b8a6; color: #fff; border-radius: 0.25rem; text-align: center; font-size: 0.75rem; animation: grow 1s ease forwards; }
+@keyframes grow { from { width: 40px; opacity: 0.5; } to { width: 120px; opacity: 1; } }

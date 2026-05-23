@@ -1,0 +1,6 @@
+/* 002 — Margin collapse */
+
+.collapse-wrap { background: #f1f5f9; padding: 1rem; }
+.block-a { margin: 0 0 24px; background: #fecaca; padding: 0.5rem; }
+.block-b { margin: 32px 0 0; background: #bfdbfe; padding: 0.5rem; }
+.collapse-note { margin: 1rem 0 0; font-size: 0.75rem; color: #64748b; }

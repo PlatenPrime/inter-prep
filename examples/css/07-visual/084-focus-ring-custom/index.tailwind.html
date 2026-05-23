@@ -1,0 +1,38 @@
+<!--
+  084 — Custom focus ring
+  @tags visual, a11y
+  @difficulty easy
+
+  :focus-visible с outline/box-shadow.
+  На собесе: Не убирай outline без замены.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>084 — Custom focus ring (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>084 — Custom focus ring</h1>
+      <p class="demo-task">:focus-visible с outline/box-shadow.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">visual, a11y</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <button type="button" class="px-4 py-2 bg-white border-2 border-slate-300 rounded-md text-sm cursor-pointer focus:outline-none focus-visible:outline focus-visible:outline-3 focus-visible:outline-blue-600 focus-visible:outline-offset-2">Focus me (Tab)</button>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> focus-visible:outline focus-visible:outline-offset-2</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

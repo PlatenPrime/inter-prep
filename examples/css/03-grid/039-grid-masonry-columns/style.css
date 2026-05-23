@@ -1,0 +1,5 @@
+/* 039 — CSS columns masonry-like */
+
+.masonry { column-count: 2; column-gap: 0.75rem; }
+.card-m { break-inside: avoid; margin-bottom: 0.75rem; padding: 0.75rem; background: #e0f2fe; border-radius: 0.375rem; font-size: 0.75rem; }
+.tall-m { min-height: 80px; }

@@ -1,0 +1,38 @@
+<!--
+  050 — Sticky sidebar
+  @tags position, sticky
+  @difficulty medium
+
+  Sidebar липнет при скролле страницы.
+  На собесе: align-self: start на sticky в grid.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>050 — Sticky sidebar (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>050 — Sticky sidebar</h1>
+      <p class="demo-task">Sidebar липнет при скролле страницы.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">position, sticky</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="grid grid-cols-[100px_1fr] gap-4 max-h-[180px] overflow-auto"><aside class="sticky top-0 self-start p-3 bg-indigo-600 text-white text-xs rounded">Sticky aside</aside><main class="text-sm text-slate-600"><p class="mb-4">Long content…</p><p class="mb-4">More scroll.</p><p>Third block.</p></main></div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> sticky top-0 self-start</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!--
+  005 — CSS custom properties
+  @tags fundamentals, variables
+  @difficulty easy
+
+  Тема через --переменные на :root; переключение data-theme.
+  На собесе: var(--x), fallback; наследование; отличие от Sass $vars.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>005 — CSS custom properties (Pure CSS)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>005 — CSS custom properties</h1>
+      <p class="demo-task">Тема через --переменные на :root; переключение data-theme.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">fundamentals, variables</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Pure CSS</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="theme-root" data-theme="light">
+        <button type="button" class="theme-toggle">Toggle theme</button>
+        <div class="theme-card">Card uses var(--bg) and var(--text)</div>
+      </div>
+      <script>
+      document.querySelector('.theme-toggle')?.addEventListener('click', () => {
+        const r = document.querySelector('.theme-root');
+        r.dataset.theme = r.dataset.theme === 'dark' ? 'light' : 'dark';
+      });
+      </script>
+    </div>
+    
+    
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

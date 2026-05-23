@@ -1,0 +1,38 @@
+<!--
+  017 — min-width: 0
+  @tags flex, overflow
+  @difficulty medium
+
+  Длинный текст в flex-item обрезается с min-width: 0.
+  На собесе: Default min-width: auto блокирует shrink.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>017 — min-width: 0 (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>017 — min-width: 0</h1>
+      <p class="demo-task">Длинный текст в flex-item обрезается с min-width: 0.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">flex, overflow</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="flex gap-2 max-w-full"><div class="shrink-0 w-[60px] p-2 bg-slate-200 text-xs">Fixed</div><p class="flex-1 min-w-0 truncate text-xs p-2 bg-amber-100 m-0">VeryLongUnbreakableTextThatWouldOverflowWithoutMinWidthZero</p></div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> min-w-0 truncate</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

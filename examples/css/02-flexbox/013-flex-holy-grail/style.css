@@ -1,0 +1,7 @@
+/* 013 — Holy grail (flex) */
+
+.hg { display: flex; flex-direction: column; min-height: 200px; border: 1px solid #e2e8f0; border-radius: 0.5rem; overflow: hidden; font-size: 0.75rem; }
+.hg-h, .hg-f { padding: 0.5rem; background: #334155; color: #fff; text-align: center; }
+.hg-body { display: flex; flex: 1; }
+.hg-aside { width: 80px; background: #94a3b8; padding: 0.5rem; }
+.hg-main { flex: 1; padding: 0.75rem; background: #f1f5f9; }

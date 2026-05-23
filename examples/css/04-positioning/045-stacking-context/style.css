@@ -1,0 +1,6 @@
+/* 045 — Stacking context */
+
+.stack-a { position: relative; z-index: 1; background: #fecaca; padding: 1rem; border-radius: 0.375rem; }
+.stack-b { position: relative; z-index: 1; background: #bfdbfe; padding: 1rem; margin-top: 0.5rem; transform: translateZ(0); }
+.stack-c { position: relative; z-index: 9999; background: #22c55e; color: #fff; padding: 0.25rem 0.5rem; font-size: 0.7rem; }
+.stack-d { position: relative; z-index: 2; background: #1e293b; color: #fff; padding: 0.75rem; margin-top: 0.5rem; border-radius: 0.375rem; font-size: 0.75rem; }

@@ -6,6 +6,8 @@
   "type": "module",
   "scripts": {
     "examples:js": "node examples/js/run-all.mjs",
+    "examples:css": "node examples/css/run-check.mjs",
+    "examples:css:serve": "npx --yes serve examples/css -p 4173",
     "test": "node scripts/test-all-days.mjs",
     "test:all": "node scripts/test-all-days.mjs",
     "day-01": "node days/day-01-web-platform-git/tasks/run-all.js",

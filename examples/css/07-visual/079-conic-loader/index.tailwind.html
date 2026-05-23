@@ -1,0 +1,38 @@
+<!--
+  079 — Conic gradient loader
+  @tags visual, gradient
+  @difficulty medium
+
+  Спиннер на conic-gradient + mask.
+  На собесе: conic vs repeating-linear-gradient.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>079 — Conic gradient loader (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>079 — Conic gradient loader</h1>
+      <p class="demo-task">Спиннер на conic-gradient + mask.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">visual, gradient</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="w-10 h-10 rounded-full border-4 border-slate-200 border-t-blue-600 animate-spin" aria-label="Loading"></div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> border-t + animate-spin (Tailwind pattern)</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

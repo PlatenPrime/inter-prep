@@ -1,0 +1,4 @@
+/* 030 — Center in grid cell */
+
+.gc { display: grid; place-items: center; min-height: 140px; background: #e2e8f0; border-radius: 0.5rem; }
+.gc-child { padding: 0.75rem 1.25rem; background: #7c3aed; color: #fff; border-radius: 0.375rem; font-size: 0.875rem; }

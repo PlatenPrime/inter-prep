@@ -1,0 +1,6 @@
+/* 033 — grid-auto-flow dense */
+
+.dense { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-flow: dense; gap: 0.35rem; }
+.dense > div { padding: 1rem; background: #fcd34d; border-radius: 0.25rem; text-align: center; font-size: 0.75rem; }
+.dense .tall { grid-row: span 2; }
+.dense .wide { grid-column: span 2; }

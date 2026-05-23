@@ -1,0 +1,38 @@
+<!--
+  076 — Elevation shadows
+  @tags visual, shadow
+  @difficulty easy
+
+  Уровни elevation через box-shadow.
+  На собесе: Один shadow vs layered shadows.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>076 — Elevation shadows (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>076 — Elevation shadows</h1>
+      <p class="demo-task">Уровни elevation через box-shadow.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">visual, shadow</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="flex gap-4"><div class="w-16 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center font-semibold text-sm">1</div><div class="w-16 h-16 bg-white rounded-lg shadow-md flex items-center justify-center font-semibold text-sm">2</div><div class="w-16 h-16 bg-white rounded-lg shadow-xl flex items-center justify-center font-semibold text-sm">3</div></div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> shadow-sm shadow-md shadow-xl</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

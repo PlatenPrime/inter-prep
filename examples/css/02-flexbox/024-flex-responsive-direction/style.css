@@ -1,0 +1,5 @@
+/* 024 — Responsive flex-direction */
+
+.resp-flex { display: flex; flex-direction: column; gap: 0.5rem; }
+.resp-flex > div { padding: 1rem; background: #fde68a; border-radius: 0.25rem; text-align: center; font-size: 0.875rem; }
+@media (min-width: 480px) { .resp-flex { flex-direction: row; } }

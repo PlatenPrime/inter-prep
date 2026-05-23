@@ -1,0 +1,38 @@
+<!--
+  099 — Skeleton shimmer
+  @tags components, loading
+  @difficulty medium
+
+  Placeholder загрузки с gradient animation.
+  На собесе: prefers-reduced-motion; не вместо aria-busy.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>099 — Skeleton shimmer (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>099 — Skeleton shimmer</h1>
+      <p class="demo-task">Placeholder загрузки с gradient animation.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">components, loading</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="space-y-2"><div class="h-3 rounded bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 bg-[length:200%_100%] animate-[shimmer_1.2s_ease_infinite]"></div><div class="h-3 w-3/5 rounded bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 bg-[length:200%_100%] animate-[shimmer_1.2s_ease_infinite]"></div></div><style>@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}</style>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> animate-[shimmer_...] + @keyframes</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

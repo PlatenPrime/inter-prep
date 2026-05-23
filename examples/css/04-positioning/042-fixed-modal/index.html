@@ -1,0 +1,43 @@
+<!--
+  042 — Fixed modal overlay
+  @tags position, modal
+  @difficulty medium
+
+  Модалка: fixed overlay + centered dialog.
+  На собесе: inset: 0; flex center; z-index stacking.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>042 — Fixed modal overlay (Pure CSS)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>042 — Fixed modal overlay</h1>
+      <p class="demo-task">Модалка: fixed overlay + centered dialog.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">position, modal</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Pure CSS</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="modal-demo"><button type="button" class="open-modal">Open modal</button><div class="overlay" hidden><div class="dialog" role="dialog"><p>Modal content</p><button type="button" class="close-modal">Close</button></div></div></div>
+      <script>
+      const ov = document.querySelector('.overlay');
+      document.querySelector('.open-modal')?.addEventListener('click', () => { ov.hidden = false; });
+      document.querySelector('.close-modal')?.addEventListener('click', () => { ov.hidden = true; });
+      </script>
+    </div>
+    
+    
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+/* 027 — Dashboard grid areas */
+
+.dash { display: grid; min-height: 160px; grid-template: "side top" 40px "side content" 1fr / 100px 1fr; gap: 4px; font-size: 0.7rem; }
+.dash aside { grid-area: side; background: #1e40af; color: #fff; padding: 0.5rem; }
+.dash header { grid-area: top; background: #3b82f6; color: #fff; padding: 0.5rem; }
+.dash section { grid-area: content; background: #eff6ff; padding: 0.5rem; }

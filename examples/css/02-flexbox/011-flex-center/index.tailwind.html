@@ -1,0 +1,38 @@
+<!--
+  011 — Flex center 2D
+  @tags flex, layout
+  @difficulty easy
+
+  Центрируй блок по горизонтали и вертикали во flex-контейнере.
+  На собесе: justify-content vs align-items; оси при flex-direction.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>011 — Flex center 2D (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>011 — Flex center 2D</h1>
+      <p class="demo-task">Центрируй блок по горизонтали и вертикали во flex-контейнере.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">flex, layout</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="flex justify-center items-center min-h-[180px] bg-slate-200 rounded-lg"><div class="px-6 py-4 bg-blue-600 text-white rounded-md font-semibold">Centered</div></div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> flex justify-center items-center</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

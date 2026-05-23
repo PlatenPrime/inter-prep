@@ -1,0 +1,38 @@
+<!--
+  092 — Scroll snap carousel
+  @tags animation, scroll
+  @difficulty medium
+
+  Горизонтальный скролл со snap points.
+  На собесе: scroll-snap-type на родителе; align на детях.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>092 — Scroll snap carousel (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>092 — Scroll snap carousel</h1>
+      <p class="demo-task">Горизонтальный скролл со snap points.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">animation, scroll</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="flex gap-2 overflow-x-auto snap-x snap-mandatory pb-2"><div class="shrink-0 w-[80%] snap-center py-8 bg-indigo-200 rounded-lg text-center font-semibold">1</div><div class="shrink-0 w-[80%] snap-center py-8 bg-indigo-200 rounded-lg text-center font-semibold">2</div><div class="shrink-0 w-[80%] snap-center py-8 bg-indigo-200 rounded-lg text-center font-semibold">3</div></div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> snap-x snap-mandatory snap-center</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

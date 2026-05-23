@@ -1,0 +1,38 @@
+<!--
+  064 — Touch targets 44px
+  @tags responsive, a11y
+  @difficulty easy
+
+  Минимальная зона нажатия ~44×44px (WCAG).
+  На собесе: padding vs min-height; spacing между кнопками.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>064 — Touch targets 44px (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>064 — Touch targets 44px</h1>
+      <p class="demo-task">Минимальная зона нажатия ~44×44px (WCAG).</p>
+      <div class="demo-meta">
+        <span class="demo-badge">responsive, a11y</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <button type="button" class="min-w-11 min-h-11 px-4 py-2 bg-emerald-600 text-white rounded-lg border-0 cursor-pointer text-sm">Tap</button>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> min-w-11 min-h-11 (44px)</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

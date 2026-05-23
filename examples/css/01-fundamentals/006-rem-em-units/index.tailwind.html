@@ -1,0 +1,42 @@
+<!--
+  006 — rem vs em
+  @tags fundamentals, units
+  @difficulty easy
+
+  rem от root, em от родителя — размер шрифта вложенных элементов.
+  На собесе: Когда em ломает вложенность; rem для spacing scale.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>006 — rem vs em (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>006 — rem vs em</h1>
+      <p class="demo-task">rem от root, em от родителя — размер шрифта вложенных элементов.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">fundamentals, units</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="text-xl p-3 bg-indigo-100 rounded">
+        Parent text-xl
+        <p class="text-[1.5em] mt-2">1.5em от родителя</p>
+      </div>
+      <p class="text-lg mt-3 text-slate-600">text-lg ≈ 1.125rem</p>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> text-lg → 1.125rem; text-[1.5em] → arbitrary em</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

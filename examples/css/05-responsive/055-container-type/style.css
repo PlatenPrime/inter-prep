@@ -1,0 +1,4 @@
+/* 055 — container-type */
+
+.ct-wrap { container-type: inline-size; width: 60%; min-width: 120px; padding: 1rem; background: #cffafe; border-radius: 0.375rem; resize: horizontal; overflow: auto; font-size: 0.75rem; }
+@container (min-width: 200px) { .ct-wrap { background: #67e8f9; } }

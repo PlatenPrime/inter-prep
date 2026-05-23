@@ -1,0 +1,6 @@
+/* 049 — Fullscreen menu */
+
+.menu-open { padding: 0.5rem 1rem; background: #1e293b; color: #fff; border: none; border-radius: 0.375rem; cursor: pointer; }
+.full-menu { position: fixed; inset: 0; background: #0f172a; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; z-index: 40; }
+.full-menu[hidden] { display: none; }
+.full-menu a { color: #fff; font-size: 1.25rem; text-decoration: none; }

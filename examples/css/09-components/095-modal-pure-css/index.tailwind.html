@@ -1,0 +1,38 @@
+<!--
+  095 — Modal (CSS :target)
+  @tags components, modal
+  @difficulty medium
+
+  Модалка без JS через :target или checkbox hack.
+  На собесе: На проде — focus trap в JS; a11y dialog.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>095 — Modal (CSS :target) (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>095 — Modal (CSS :target)</h1>
+      <p class="demo-task">Модалка без JS через :target или checkbox hack.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">components, modal</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <a href="#tw-modal" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-md text-sm no-underline">Open</a><div id="tw-modal" class="fixed inset-0 bg-slate-900/50 hidden target:flex items-center justify-center"><div class="relative bg-white p-8 rounded-lg"><a href="#" class="absolute top-2 right-2 text-slate-500 text-xs">Close</a><p class="m-0 text-sm">Modal via :target</p></div></div><style>#tw-modal:target{display:flex!important}</style>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> :target { display:flex } — CSS-only pattern</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!--
+  093 — Smooth scroll anchor
+  @tags animation, scroll
+  @difficulty easy
+
+  scroll-behavior: smooth для якорей.
+  На собесе: prefers-reduced-motion отключить smooth.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>093 — Smooth scroll anchor (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>093 — Smooth scroll anchor</h1>
+      <p class="demo-task">scroll-behavior: smooth для якорей.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">animation, scroll</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <nav class="flex gap-2 mb-2"><a href="#tw-a" class="text-xs text-blue-600">A</a><a href="#tw-b" class="text-xs text-blue-600">B</a></nav><div class="h-[100px] overflow-auto scroll-smooth border border-slate-200 rounded"><section id="tw-a" class="min-h-[80px] p-4 bg-blue-100 text-xs">Section A</section><section id="tw-b" class="min-h-[80px] p-4 bg-pink-100 text-xs">Section B</section></div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> scroll-smooth</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

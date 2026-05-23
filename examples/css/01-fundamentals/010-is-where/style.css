@@ -1,0 +1,4 @@
+/* 010 — :is() and :where() */
+
+:is(.is-where-demo h2, .is-where-demo p) { color: #7c3aed; }
+:where(.is-where-demo h2) { margin-top: 0; font-size: 1.125rem; }

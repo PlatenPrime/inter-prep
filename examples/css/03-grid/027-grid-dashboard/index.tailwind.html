@@ -1,0 +1,38 @@
+<!--
+  027 — Dashboard grid areas
+  @tags grid
+  @difficulty medium
+
+  Dashboard: sidebar + header + content.
+  На собесе: Именованные области читаемее track lists.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>027 — Dashboard grid areas (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>027 — Dashboard grid areas</h1>
+      <p class="demo-task">Dashboard: sidebar + header + content.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">grid</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="grid min-h-[160px] text-xs gap-1" style="grid-template:'side top' 40px 'side content' 1fr / 100px 1fr"><aside class="bg-blue-800 text-white p-2" style="grid-area:side">Side</aside><header class="bg-blue-500 text-white p-2" style="grid-area:top">Top</header><section class="bg-blue-50 p-2" style="grid-area:content">Content</section></div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> grid-template shorthand в style или arbitrary</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

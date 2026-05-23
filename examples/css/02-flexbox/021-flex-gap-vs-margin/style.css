@@ -1,0 +1,4 @@
+/* 021 — gap vs margin */
+
+.gap-demo { display: flex; gap: 1rem; }
+.gap-demo span { padding: 0.5rem 1rem; background: #86efac; border-radius: 0.25rem; font-size: 0.875rem; }

@@ -1,0 +1,41 @@
+<!--
+  024 — Responsive flex-direction
+  @tags flex, responsive
+  @difficulty medium
+
+  Колонка на узком экране, ряд на широком.
+  На собесе: mobile-first: column → row в media query.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>024 — Responsive flex-direction (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+tailwind.config = { theme: { extend: { screens: { sm: '480px' } } } }
+  </script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>024 — Responsive flex-direction</h1>
+      <p class="demo-task">Колонка на узком экране, ряд на широком.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">flex, responsive</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="flex flex-col sm:flex-row gap-2"><div class="flex-1 p-4 bg-amber-200 rounded text-center text-sm">Item 1</div><div class="flex-1 p-4 bg-amber-200 rounded text-center text-sm">Item 2</div></div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> flex-col sm:flex-row</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

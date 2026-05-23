@@ -1,0 +1,39 @@
+<!--
+  003 — Specificity
+  @tags fundamentals, cascade
+  @difficulty medium
+
+  Один элемент — разные селекторы. Какой цвет победит?
+  На собесе: Порядок: inline > ID > class > element; :where() обнуляет вес.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>003 — Specificity (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>003 — Specificity</h1>
+      <p class="demo-task">Один элемент — разные селекторы. Какой цвет победит?</p>
+      <div class="demo-meta">
+        <span class="demo-badge">fundamentals, cascade</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <p class="text-blue-600 id-spec text-red-600 text-slate-500 font-medium">Tailwind: последний класс в HTML / порядок в stylesheet</p>
+      <p class="mt-2 text-xs text-slate-500">В CSS: #id побеждает .class и p</p>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> Конфликт utilities решает порядок в CSS, не «специфичность» классов</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

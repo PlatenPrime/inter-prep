@@ -1,0 +1,3 @@
+/* 077 — Mixed border-radius */
+
+.mixed-r { padding: 1.5rem 2rem; background: #f472b6; color: #fff; border-radius: 2rem 0.5rem 1.5rem 0.25rem; font-size: 0.875rem; font-weight: 600; display: inline-block; }

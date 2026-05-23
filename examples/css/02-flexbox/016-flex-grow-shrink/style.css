@@ -1,0 +1,5 @@
+/* 016 — flex-grow / shrink */
+
+.grow-row { display: flex; gap: 0.5rem; }
+.grow-row > div { padding: 1rem; background: #bfdbfe; border-radius: 0.25rem; text-align: center; font-weight: 600; flex: 1 1 0; }
+.grow-b { flex: 2 1 0; background: #93c5fd; }

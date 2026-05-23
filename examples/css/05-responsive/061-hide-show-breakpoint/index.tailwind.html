@@ -1,0 +1,41 @@
+<!--
+  061 — Hide/show at breakpoint
+  @tags responsive
+  @difficulty easy
+
+  .nav-desktop vs .nav-mobile через display.
+  На собесе: Не дублируй контент для SEO; один DOM.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>061 — Hide/show at breakpoint (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+tailwind.config = { theme: { extend: { screens: { sm: '480px' } } } }
+  </script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>061 — Hide/show at breakpoint</h1>
+      <p class="demo-task">.nav-desktop vs .nav-mobile через display.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">responsive</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <nav class="p-3 bg-slate-100 rounded text-sm"><span class="sm:hidden">☰ Mobile nav</span><span class="hidden sm:inline">Desktop links</span></nav>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> hidden sm:inline / sm:hidden</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

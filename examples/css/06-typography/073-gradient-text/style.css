@@ -1,0 +1,3 @@
+/* 073 — Gradient text */
+
+.grad-text { margin: 0; font-size: 2rem; font-weight: 800; background: linear-gradient(90deg, #2563eb, #c026d3); -webkit-background-clip: text; background-clip: text; color: transparent; }

@@ -1,0 +1,6 @@
+/* 008 — display vs visibility */
+
+.disp-row { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+.box { padding: 0.5rem 1rem; background: #cbd5e1; border-radius: 0.25rem; font-size: 0.75rem; }
+.hidden-vis { visibility: hidden; }
+.hidden-disp { display: none; }

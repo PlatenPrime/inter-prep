@@ -1,0 +1,4 @@
+/* 058 — orientation media */
+
+.orient-msg { font-size: 0.875rem; padding: 0.75rem; background: #fef3c7; border-radius: 0.375rem; }
+@media (orientation: landscape) { .orient-msg { background: #d9f99d; } }

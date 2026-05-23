@@ -1,0 +1,5 @@
+/* 017 — min-width: 0 */
+
+.minw-row { display: flex; gap: 0.5rem; max-width: 100%; }
+.minw-fixed { flex: 0 0 60px; padding: 0.5rem; background: #e2e8f0; font-size: 0.75rem; }
+.minw-flex { flex: 1; min-width: 0; margin: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 0.75rem; padding: 0.5rem; background: #fef3c7; }

@@ -1,0 +1,38 @@
+<!--
+  021 — gap vs margin
+  @tags flex, gap
+  @difficulty easy
+
+  gap между flex-элементами без margin-hack.
+  На собесе: gap работает и для grid; нет margin collapse.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>021 — gap vs margin (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>021 — gap vs margin</h1>
+      <p class="demo-task">gap между flex-элементами без margin-hack.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">flex, gap</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="flex gap-4"><span class="px-4 py-2 bg-green-300 rounded text-sm">1</span><span class="px-4 py-2 bg-green-300 rounded text-sm">2</span><span class="px-4 py-2 bg-green-300 rounded text-sm">3</span></div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> gap-4</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

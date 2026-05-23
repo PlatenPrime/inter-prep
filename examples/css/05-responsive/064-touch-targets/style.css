@@ -1,0 +1,3 @@
+/* 064 — Touch targets 44px */
+
+.touch-btn { min-width: 44px; min-height: 44px; padding: 0.5rem 1rem; background: #059669; color: #fff; border: none; border-radius: 0.5rem; cursor: pointer; font-size: 0.875rem; }

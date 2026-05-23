@@ -1,0 +1,4 @@
+/* 037 — Grid gap */
+
+.gg { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 0.5rem; }
+.gg > div { padding: 1rem; background: #ddd6fe; border-radius: 0.25rem; text-align: center; font-size: 0.875rem; }

@@ -1,0 +1,42 @@
+<!--
+  002 — Margin collapse
+  @tags fundamentals, margin
+  @difficulty easy
+
+  Покажи схлопывание вертикальных margin между соседними блоками.
+  На собесе: Когда margin схлопывается; как предотвратить (padding, border, flex/grid, overflow).
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>002 — Margin collapse (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>002 — Margin collapse</h1>
+      <p class="demo-task">Покажи схлопывание вертикальных margin между соседними блоками.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">fundamentals, margin</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="bg-slate-100 p-4">
+        <p class="mb-6 bg-red-200 p-2">Block A — mb-6 (24px)</p>
+        <p class="mt-8 bg-blue-200 p-2">Block B — mt-8 (32px)</p>
+        <p class="mt-4 text-xs text-slate-500">Схлопывание: видимый зазор ≈ max(24, 32) = 32px</p>
+      </div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> mb-6 + mt-8 схлопываются как обычные margin</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

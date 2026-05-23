@@ -1,0 +1,43 @@
+<!--
+  008 — display vs visibility
+  @tags fundamentals, display
+  @difficulty easy
+
+  visibility:hidden сохраняет место; display:none убирает из потока.
+  На собесе: accessibility: hidden vs aria-hidden; reflow.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>008 — display vs visibility (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>008 — display vs visibility</h1>
+      <p class="demo-task">visibility:hidden сохраняет место; display:none убирает из потока.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">fundamentals, display</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="flex gap-2 flex-wrap items-center">
+        <span class="px-4 py-2 bg-slate-300 rounded text-xs">visible</span>
+        <span class="px-4 py-2 bg-slate-300 rounded text-xs invisible">invisible</span>
+        <span class="px-4 py-2 bg-slate-300 rounded text-xs hidden">hidden</span>
+        <span class="px-4 py-2 bg-slate-300 rounded text-xs">after</span>
+      </div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> invisible → visibility:hidden; hidden → display:none</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

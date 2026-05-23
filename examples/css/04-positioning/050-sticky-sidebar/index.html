@@ -1,0 +1,38 @@
+<!--
+  050 — Sticky sidebar
+  @tags position, sticky
+  @difficulty medium
+
+  Sidebar липнет при скролле страницы.
+  На собесе: align-self: start на sticky в grid.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>050 — Sticky sidebar (Pure CSS)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>050 — Sticky sidebar</h1>
+      <p class="demo-task">Sidebar липнет при скролле страницы.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">position, sticky</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Pure CSS</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="sticky-layout"><aside class="sticky-aside">Sticky aside</aside><main class="sticky-main"><p>Long content block one.</p><p>More content to enable scroll in this demo container.</p><p>Third block of text for height.</p></main></div>
+    </div>
+    
+    
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!--
+  015 — Flex wrap chips
+  @tags flex, wrap
+  @difficulty easy
+
+  Теги переносятся на новую строку через flex-wrap.
+  На собесе: gap вместо margin на каждом чипе.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>015 — Flex wrap chips (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>015 — Flex wrap chips</h1>
+      <p class="demo-task">Теги переносятся на новую строку через flex-wrap.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">flex, wrap</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <ul class="flex flex-wrap gap-2 list-none m-0 p-0"><li class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">React</li><li class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">TypeScript</li><li class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">CSS</li><li class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Tailwind</li><li class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Node</li></ul>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> flex-wrap gap-2</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!--
+  095 — Modal (CSS :target)
+  @tags components, modal
+  @difficulty medium
+
+  Модалка без JS через :target или checkbox hack.
+  На собесе: На проде — focus trap в JS; a11y dialog.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>095 — Modal (CSS :target) (Pure CSS)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>095 — Modal (CSS :target)</h1>
+      <p class="demo-task">Модалка без JS через :target или checkbox hack.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">components, modal</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Pure CSS</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <a href="#demo-modal" class="open-target">Open</a><div id="demo-modal" class="target-modal"><a href="#" class="close-target">Close</a><p>Modal via :target</p></div>
+    </div>
+    
+    
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

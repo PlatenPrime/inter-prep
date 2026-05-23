@@ -1,0 +1,8 @@
+/* 042 — Fixed modal overlay */
+
+.open-modal { padding: 0.5rem 1rem; background: #2563eb; color: #fff; border: none; border-radius: 0.375rem; cursor: pointer; }
+.overlay { position: fixed; inset: 0; background: rgb(15 23 42 / 50%); display: flex; align-items: center; justify-content: center; z-index: 50; }
+.overlay[hidden] { display: none; }
+.dialog { background: #fff; padding: 1.5rem; border-radius: 0.5rem; max-width: 280px; box-shadow: 0 25px 50px rgb(0 0 0 / 15%); }
+.dialog p { margin: 0 0 1rem; font-size: 0.875rem; }
+.close-modal { padding: 0.35rem 0.75rem; border: 1px solid #e2e8f0; border-radius: 0.25rem; cursor: pointer; background: #f8fafc; }

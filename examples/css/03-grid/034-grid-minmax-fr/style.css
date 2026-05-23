@@ -1,0 +1,5 @@
+/* 034 — minmax(0, 1fr) */
+
+.mg { display: grid; grid-template-columns: 80px minmax(0, 1fr); gap: 0.5rem; }
+.mg .fixed { background: #e2e8f0; padding: 0.5rem; font-size: 0.7rem; }
+.mg .fluid { margin: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; background: #fce7f3; padding: 0.5rem; font-size: 0.7rem; }

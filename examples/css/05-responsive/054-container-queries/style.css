@@ -1,0 +1,5 @@
+/* 054 — Container queries */
+
+.cq-wrap { container-type: inline-size; max-width: 100%; resize: horizontal; overflow: auto; padding: 0.5rem; border: 1px dashed #94a3b8; }
+.cq-card { padding: 0.75rem; background: #fae8ff; border-radius: 0.375rem; font-size: 0.75rem; }
+@container (min-width: 280px) { .cq-card { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; background: #e9d5ff; } }

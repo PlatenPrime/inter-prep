@@ -1,0 +1,5 @@
+/* 032 — Subgrid */
+
+.subg { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
+.subg article { display: grid; grid-template-rows: subgrid; grid-row: span 2; gap: 0.25rem; padding: 0.75rem; background: #f5f3ff; border-radius: 0.375rem; font-size: 0.75rem; }
+.subg h3 { margin: 0; font-size: 0.875rem; }

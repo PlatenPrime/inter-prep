@@ -1,0 +1,45 @@
+<!--
+  005 — CSS custom properties
+  @tags fundamentals, variables
+  @difficulty easy
+
+  Тема через --переменные на :root; переключение data-theme.
+  На собесе: var(--x), fallback; наследование; отличие от Sass $vars.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>005 — CSS custom properties (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+tailwind.config = { darkMode: 'class' }
+  </script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>005 — CSS custom properties</h1>
+      <p class="demo-task">Тема через --переменные на :root; переключение data-theme.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">fundamentals, variables</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div id="tw-theme" class="p-4 rounded-lg border border-slate-200 bg-white text-slate-900">
+        <button type="button" id="tw-theme-btn" class="px-3 py-1 rounded border border-blue-600 text-sm">Toggle dark</button>
+        <div class="mt-3 p-4 rounded bg-blue-50 dark:bg-blue-900/30">dark: префикс ≈ другая тема</div>
+      </div>
+      <script>document.getElementById('tw-theme-btn')?.addEventListener('click',()=>document.documentElement.classList.toggle('dark'));</script>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> --var на :root ↔ theme() / arbitrary values; dark: ↔ [data-theme]</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

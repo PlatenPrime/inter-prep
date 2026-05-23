@@ -1,0 +1,38 @@
+<!--
+  025 — Sidebar flex:1
+  @tags flex, layout
+  @difficulty easy
+
+  Sidebar фиксированной ширины, main занимает остаток.
+  На собесе: flex: 1 1 auto на main; shrink-0 на aside.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>025 — Sidebar flex:1 (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>025 — Sidebar flex:1</h1>
+      <p class="demo-task">Sidebar фиксированной ширины, main занимает остаток.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">flex, layout</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="flex gap-2 min-h-[120px]"><aside class="shrink-0 w-[120px] p-3 bg-slate-700 text-white text-xs rounded">Sidebar</aside><main class="flex-1 p-3 bg-slate-200 text-xs rounded">Main flex-1</main></div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> shrink-0 w-[120px] flex-1</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

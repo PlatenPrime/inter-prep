@@ -1,0 +1,38 @@
+<!--
+  045 — Stacking context
+  @tags position, z-index
+  @difficulty medium
+
+  z-index:9999 внутри контекста не выходит наружу.
+  На собесе: opacity, transform, filter создают новый context.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>045 — Stacking context (Pure CSS)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>045 — Stacking context</h1>
+      <p class="demo-task">z-index:9999 внутри контекста не выходит наружу.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">position, z-index</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Pure CSS</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="stack-a"><div class="stack-b"><span class="stack-c">z-index 9999</span></div></div><div class="stack-d">Sibling context wins</div>
+    </div>
+    
+    
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

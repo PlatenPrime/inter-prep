@@ -1,0 +1,38 @@
+<!--
+  028 — auto-fit minmax cards
+  @tags grid, responsive
+  @difficulty medium
+
+  Адаптивная сетка карточек без media queries.
+  На собесе: repeat(auto-fit, minmax(140px, 1fr)).
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>028 — auto-fit minmax cards (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>028 — auto-fit minmax cards</h1>
+      <p class="demo-task">Адаптивная сетка карточек без media queries.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">grid, responsive</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-2"><div class="py-6 bg-indigo-300 rounded text-center font-semibold text-sm">1</div><div class="py-6 bg-indigo-300 rounded text-center font-semibold text-sm">2</div><div class="py-6 bg-indigo-300 rounded text-center font-semibold text-sm">3</div><div class="py-6 bg-indigo-300 rounded text-center font-semibold text-sm">4</div></div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> grid-cols-[repeat(auto-fit,minmax(100px,1fr))]</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

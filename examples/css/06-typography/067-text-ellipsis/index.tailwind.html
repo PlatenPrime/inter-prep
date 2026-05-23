@@ -1,0 +1,38 @@
+<!--
+  067 — Single-line ellipsis
+  @tags typography
+  @difficulty easy
+
+  text-overflow: ellipsis в одну строку.
+  На собесе: Нужны overflow hidden + white-space nowrap.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>067 — Single-line ellipsis (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>067 — Single-line ellipsis</h1>
+      <p class="demo-task">text-overflow: ellipsis в одну строку.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">typography</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <p class="max-w-[200px] truncate m-0 text-sm p-2 bg-slate-100 rounded">VeryLongUsernameThatDoesNotFit</p>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> truncate = overflow hidden + ellipsis + nowrap</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

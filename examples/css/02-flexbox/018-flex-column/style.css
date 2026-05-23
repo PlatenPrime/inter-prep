@@ -1,0 +1,4 @@
+/* 018 — Flex column layout */
+
+.col-stack { display: flex; flex-direction: column; gap: 0.5rem; }
+.col-stack > div { padding: 0.75rem; background: #c7d2fe; border-radius: 0.25rem; text-align: center; font-size: 0.875rem; }

@@ -1,0 +1,38 @@
+<!--
+  065 — safe-area-inset
+  @tags responsive, mobile
+  @difficulty medium
+
+  padding с env(safe-area-inset-*) для notch.
+  На собесе: viewport-fit=cover в meta.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>065 — safe-area-inset (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>065 — safe-area-inset</h1>
+      <p class="demo-task">padding с env(safe-area-inset-*) для notch.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">responsive, mobile</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <footer class="px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] bg-slate-800 text-white rounded-lg text-xs">pb-[max(0.75rem,env(safe-area-inset-bottom))]</footer>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> arbitrary env(safe-area-inset-bottom)</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

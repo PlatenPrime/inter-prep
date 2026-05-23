@@ -1,0 +1,41 @@
+<!--
+  056 — prefers-color-scheme
+  @tags responsive, theme
+  @difficulty easy
+
+  Авто-тема от системных настроек.
+  На собесе: Сочетание с data-theme / class .dark.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>056 — prefers-color-scheme (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+tailwind.config = { darkMode: 'media' }
+  </script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>056 — prefers-color-scheme</h1>
+      <p class="demo-task">Авто-тема от системных настроек.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">responsive, theme</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="p-4 rounded-lg bg-white text-slate-900 border border-slate-200 dark:bg-slate-800 dark:text-slate-100 dark:border-slate-600 text-sm">dark: from OS when darkMode: media</div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> dark: с darkMode: media</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

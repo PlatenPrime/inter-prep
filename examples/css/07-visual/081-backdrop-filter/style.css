@@ -1,0 +1,4 @@
+/* 081 — backdrop-filter blur */
+
+.glass-wrap { padding: 2rem; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='100'%3E%3Crect fill='%23818cf8' width='200' height='100'/%3E%3C/svg%3E") center/cover; border-radius: 0.5rem; }
+.glass { padding: 1rem 1.5rem; background: rgb(255 255 255 / 25%); backdrop-filter: blur(8px); border-radius: 0.375rem; color: #fff; font-size: 0.875rem; font-weight: 600; border: 1px solid rgb(255 255 255 / 30%); }

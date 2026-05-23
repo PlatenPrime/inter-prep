@@ -1,0 +1,6 @@
+/* 082 — mix-blend-mode */
+
+.blend-wrap { position: relative; width: 140px; height: 100px; }
+.blend-a, .blend-b { position: absolute; width: 80px; height: 80px; border-radius: 50%; }
+.blend-a { background: #3b82f6; top: 0; left: 0; }
+.blend-b { background: #f59e0b; top: 20px; left: 40px; mix-blend-mode: multiply; }

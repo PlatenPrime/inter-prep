@@ -1,0 +1,38 @@
+<!--
+  053 — clamp() spacing
+  @tags responsive, clamp
+  @difficulty medium
+
+  Адаптивные отступы секции через clamp.
+  На собесе: fluid spacing без десятков breakpoints.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>053 — clamp() spacing (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>053 — clamp() spacing</h1>
+      <p class="demo-task">Адаптивные отступы секции через clamp.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">responsive, clamp</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <section class="p-[clamp(1rem,4vw,3rem)] bg-indigo-100 rounded-lg text-sm text-indigo-800">Section padding scales</section>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> p-[clamp(1rem,4vw,3rem)]</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

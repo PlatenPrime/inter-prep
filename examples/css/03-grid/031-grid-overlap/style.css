@@ -1,0 +1,6 @@
+/* 031 — Grid overlap */
+
+.overlap { display: grid; max-width: 200px; }
+.overlap > * { grid-area: 1 / 1; }
+.overlap img { border-radius: 0.5rem; width: 100%; height: auto; }
+.overlap .badge { align-self: end; justify-self: start; margin: 0.5rem; padding: 0.25rem 0.5rem; background: #dc2626; color: #fff; font-size: 0.7rem; border-radius: 0.25rem; }

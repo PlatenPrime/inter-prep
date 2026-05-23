@@ -1,0 +1,4 @@
+/* 063 — Fluid auto-fit grid */
+
+.fluid-g { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 120px), 1fr)); gap: 0.5rem; }
+.fluid-g > div { padding: 1rem; background: #c4b5fd; border-radius: 0.25rem; text-align: center; font-size: 0.875rem; }

@@ -1,0 +1,5 @@
+/* 019 — align-self */
+
+.self-row { display: flex; align-items: center; gap: 0.5rem; min-height: 100px; background: #f1f5f9; padding: 0.5rem; border-radius: 0.5rem; }
+.self-row > div { padding: 0.5rem 1rem; background: #94a3b8; color: #fff; border-radius: 0.25rem; font-size: 0.75rem; }
+.self-end { align-self: flex-end; background: #2563eb; }

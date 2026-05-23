@@ -1,0 +1,4 @@
+/* 048 — inset shorthand */
+
+.inset-wrap { position: relative; min-height: 120px; background: #e2e8f0; border-radius: 0.5rem; }
+.inset-fill { position: absolute; inset: 12px; background: #0d9488; color: #fff; display: flex; align-items: center; justify-content: center; border-radius: 0.25rem; font-size: 0.875rem; }

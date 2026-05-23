@@ -1,0 +1,7 @@
+/* 007 — dvh vs vh */
+
+.vh-panel {
+  min-height: 40dvh; display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6); color: #fff; border-radius: 0.5rem;
+  font-weight: 600; font-size: 0.875rem; text-align: center; padding: 1rem;
+}

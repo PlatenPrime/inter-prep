@@ -1,0 +1,41 @@
+<!--
+  051 — Mobile-first breakpoints
+  @tags responsive, media
+  @difficulty easy
+
+  Базовые стили для mobile; расширение в @media (min-width).
+  На собесе: min-width mobile-first vs max-width desktop-first.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>051 — Mobile-first breakpoints (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+tailwind.config = { theme: { extend: { screens: { sm: '480px' } } } }
+  </script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>051 — Mobile-first breakpoints</h1>
+      <p class="demo-task">Базовые стили для mobile; расширение в @media (min-width).</p>
+      <div class="demo-meta">
+        <span class="demo-badge">responsive, media</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="p-4 bg-yellow-200 sm:bg-green-300 rounded text-sm">bg-yellow → sm:bg-green (480px+)</div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> sm: префикс = min-width breakpoint</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

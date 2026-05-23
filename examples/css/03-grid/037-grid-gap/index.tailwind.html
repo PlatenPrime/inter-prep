@@ -1,0 +1,38 @@
+<!--
+  037 — Grid gap
+  @tags grid, gap
+  @difficulty easy
+
+  row-gap и column-gap (gap shorthand).
+  На собесе: gap не схлопывается как margin.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>037 — Grid gap (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>037 — Grid gap</h1>
+      <p class="demo-task">row-gap и column-gap (gap shorthand).</p>
+      <div class="demo-meta">
+        <span class="demo-badge">grid, gap</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="grid grid-cols-2 gap-x-2 gap-y-4"><div class="p-4 bg-violet-200 rounded text-center text-sm">A</div><div class="p-4 bg-violet-200 rounded text-center text-sm">B</div><div class="p-4 bg-violet-200 rounded text-center text-sm">C</div><div class="p-4 bg-violet-200 rounded text-center text-sm">D</div></div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> gap-x-2 gap-y-4</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

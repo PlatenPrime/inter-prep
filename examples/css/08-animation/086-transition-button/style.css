@@ -1,0 +1,4 @@
+/* 086 — Transition on hover */
+
+.trans-btn { padding: 0.6rem 1.25rem; background: #2563eb; color: #fff; border: none; border-radius: 0.5rem; cursor: pointer; font-size: 0.875rem; transition: background 0.2s ease, transform 0.15s ease; }
+.trans-btn:hover { background: #1d4ed8; transform: translateY(-2px); }

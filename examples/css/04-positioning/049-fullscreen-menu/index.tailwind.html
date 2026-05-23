@@ -1,0 +1,38 @@
+<!--
+  049 — Fullscreen menu
+  @tags position, nav
+  @difficulty medium
+
+  Меню на весь экран через fixed inset.
+  На собесе: body scroll lock; focus trap в JS.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>049 — Fullscreen menu (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>049 — Fullscreen menu</h1>
+      <p class="demo-task">Меню на весь экран через fixed inset.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">position, nav</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <button type="button" id="fm-open" class="px-4 py-2 bg-slate-800 text-white rounded-md border-0 cursor-pointer">Menu</button><nav id="fm-nav" class="fixed inset-0 bg-slate-900 hidden flex-col items-center justify-center gap-4 z-40"><a href="#" class="text-white text-xl">Home</a><a href="#" class="text-white text-xl">About</a></nav><script>const n=document.getElementById('fm-nav');document.getElementById('fm-open')?.addEventListener('click',()=>{n?.classList.remove('hidden');n?.classList.add('flex');});</script>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> fixed inset-0 flex</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

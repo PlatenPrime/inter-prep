@@ -1,0 +1,38 @@
+<!--
+  096 — Hamburger (checkbox)
+  @tags components, nav
+  @difficulty medium
+
+  Иконка меню → крестик на checkbox hack.
+  На собесе: Скрытый checkbox + label; peer в Tailwind.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>096 — Hamburger (checkbox) (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>096 — Hamburger (checkbox)</h1>
+      <p class="demo-task">Иконка меню → крестик на checkbox hack.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">components, nav</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <input type="checkbox" id="tw-ham" class="peer sr-only" /><label for="tw-ham" class="flex flex-col gap-1.5 w-7 cursor-pointer"><span class="block h-0.5 bg-slate-800 rounded transition peer-checked:translate-y-2 peer-checked:rotate-45"></span><span class="block h-0.5 bg-slate-800 rounded transition peer-checked:opacity-0"></span><span class="block h-0.5 bg-slate-800 rounded transition peer-checked:-translate-y-2 peer-checked:-rotate-45"></span></label>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> peer-checked: на соседних span (структура может отличаться)</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+/* 026 — Holy grail (grid) */
+
+.g-hg { display: grid; min-height: 200px; grid-template-columns: 80px 1fr 80px; grid-template-rows: auto 1fr auto; grid-template-areas: "head head head" "nav main aside" "foot foot foot"; gap: 2px; font-size: 0.7rem; }
+.g-hg > * { padding: 0.5rem; }
+.g-hg header { grid-area: head; background: #334155; color: #fff; }
+.g-hg nav { grid-area: nav; background: #94a3b8; }
+.g-hg main { grid-area: main; background: #f1f5f9; }
+.g-hg aside { grid-area: aside; background: #cbd5e1; }
+.g-hg footer { grid-area: foot; background: #334155; color: #fff; }

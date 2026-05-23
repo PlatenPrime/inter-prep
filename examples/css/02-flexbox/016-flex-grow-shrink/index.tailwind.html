@@ -1,0 +1,38 @@
+<!--
+  016 — flex-grow / shrink
+  @tags flex
+  @difficulty medium
+
+  Три колонки: flex: 1 1 0 — равное распределение.
+  На собесе: flex-basis 0 vs auto; min-width: 0.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>016 — flex-grow / shrink (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>016 — flex-grow / shrink</h1>
+      <p class="demo-task">Три колонки: flex: 1 1 0 — равное распределение.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">flex</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="flex gap-2"><div class="flex-1 p-4 bg-blue-200 rounded text-center font-semibold">A</div><div class="flex-[2] p-4 bg-blue-300 rounded text-center font-semibold">B flex-[2]</div><div class="flex-1 p-4 bg-blue-200 rounded text-center font-semibold">C</div></div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> flex-1 → 1 1 0%; flex-[2] → grow 2</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!--
+  007 — dvh vs vh
+  @tags fundamentals, viewport
+  @difficulty medium
+
+  100vh на мобильных обрезается UI браузера; dvh/svh/lvh.
+  На собесе: Mobile Safari 100vh bug; когда использовать dvh.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>007 — dvh vs vh (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>007 — dvh vs vh</h1>
+      <p class="demo-task">100vh на мобильных обрезается UI браузера; dvh/svh/lvh.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">fundamentals, viewport</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="min-h-[40dvh] flex items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-violet-500 text-white font-semibold text-sm text-center p-4">min-h-[40dvh]</div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> min-h-[40dvh] → arbitrary viewport unit</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

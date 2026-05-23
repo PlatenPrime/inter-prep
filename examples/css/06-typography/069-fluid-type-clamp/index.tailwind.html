@@ -1,0 +1,38 @@
+<!--
+  069 — Fluid type clamp
+  @tags typography, clamp
+  @difficulty medium
+
+  Заголовок масштабируется между min и max.
+  На собесе: clamp + vw для fluid typography.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>069 — Fluid type clamp (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>069 — Fluid type clamp</h1>
+      <p class="demo-task">Заголовок масштабируется между min и max.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">typography, clamp</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <h1 class="m-0 text-[clamp(1.5rem,4vw+0.5rem,2.5rem)] font-extrabold text-slate-900">Hero Title</h1>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> text-[clamp(...)]</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

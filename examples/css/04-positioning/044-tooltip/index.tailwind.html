@@ -1,0 +1,38 @@
+<!--
+  044 — CSS tooltip
+  @tags position, tooltip
+  @difficulty medium
+
+  Tooltip на :hover через absolute + data-attr.
+  На собесе: aria-describedby для a11y; не только CSS.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>044 — CSS tooltip (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>044 — CSS tooltip</h1>
+      <p class="demo-task">Tooltip на :hover через absolute + data-attr.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">position, tooltip</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="group relative inline-block"><button type="button" class="px-4 py-2 bg-slate-700 text-white rounded-md border-0 cursor-pointer">Hover me</button><span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-1.5 px-2 py-1 bg-slate-900 text-white text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity pointer-events-none">Helpful hint</span></div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> group-hover + absolute positioning</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

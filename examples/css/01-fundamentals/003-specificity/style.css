@@ -1,0 +1,5 @@
+/* 003 — Specificity */
+
+p { color: #64748b; }
+.text { color: #2563eb; }
+#spec { color: #dc2626; }

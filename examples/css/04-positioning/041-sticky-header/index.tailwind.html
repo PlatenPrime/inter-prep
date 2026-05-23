@@ -1,0 +1,38 @@
+<!--
+  041 — Sticky header
+  @tags position, sticky
+  @difficulty easy
+
+  Header прилипает при скролле внутри контейнера.
+  На собесе: sticky требует threshold top; родитель без overflow:hidden.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>041 — Sticky header (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>041 — Sticky header</h1>
+      <p class="demo-task">Header прилипает при скролле внутри контейнера.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">position, sticky</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="max-h-40 overflow-auto border border-slate-200 rounded-lg"><header class="sticky top-0 z-10 bg-slate-800 text-white px-4 py-2 text-sm">Sticky header</header><p class="p-3 text-sm text-slate-600 m-0">Scroll content… Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p><p class="p-3 text-sm text-slate-600 m-0">More scroll content here.</p></div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> sticky top-0 z-10</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

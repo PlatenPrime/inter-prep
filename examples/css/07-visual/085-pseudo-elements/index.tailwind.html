@@ -1,0 +1,38 @@
+<!--
+  085 — ::before / ::after
+  @tags visual
+  @difficulty easy
+
+  Декор через псевдоэлементы.
+  На собесе: content обязателен; не для семантики.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>085 — ::before / ::after (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>085 — ::before / ::after</h1>
+      <p class="demo-task">Декор через псевдоэлементы.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">visual</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <blockquote class="m-0 pl-8 pr-4 py-3 bg-slate-50 rounded text-sm relative before:content-['\201C'] before:absolute before:left-2 before:top-0 before:text-3xl before:text-slate-400">CSS is awesome</blockquote>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> before:content before:absolute</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

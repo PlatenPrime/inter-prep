@@ -1,0 +1,4 @@
+/* 056 — prefers-color-scheme */
+
+.scheme-box { padding: 1rem; border-radius: 0.5rem; background: #fff; color: #0f172a; border: 1px solid #e2e8f0; font-size: 0.875rem; }
+@media (prefers-color-scheme: dark) { .scheme-box { background: #1e293b; color: #f1f5f9; border-color: #334155; } }

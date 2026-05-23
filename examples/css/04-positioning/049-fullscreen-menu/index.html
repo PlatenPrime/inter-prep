@@ -1,0 +1,43 @@
+<!--
+  049 — Fullscreen menu
+  @tags position, nav
+  @difficulty medium
+
+  Меню на весь экран через fixed inset.
+  На собесе: body scroll lock; focus trap в JS.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>049 — Fullscreen menu (Pure CSS)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>049 — Fullscreen menu</h1>
+      <p class="demo-task">Меню на весь экран через fixed inset.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">position, nav</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Pure CSS</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <button type="button" class="menu-open">Menu</button><nav class="full-menu" hidden><a href="#">Home</a><a href="#">About</a></nav>
+      <script>
+      const fm = document.querySelector('.full-menu');
+      document.querySelector('.menu-open')?.addEventListener('click', () => { fm.hidden = false; });
+      fm?.querySelectorAll('a').forEach((a) => a.addEventListener('click', (e) => { e.preventDefault(); fm.hidden = true; }));
+      </script>
+    </div>
+    
+    
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

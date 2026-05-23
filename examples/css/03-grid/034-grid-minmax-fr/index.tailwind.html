@@ -1,0 +1,38 @@
+<!--
+  034 — minmax(0, 1fr)
+  @tags grid, overflow
+  @difficulty medium
+
+  Предотвращение overflow в fr-колонке.
+  На собесе: minmax(0,1fr) вместо 1fr для shrink.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>034 — minmax(0, 1fr) (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>034 — minmax(0, 1fr)</h1>
+      <p class="demo-task">Предотвращение overflow в fr-колонке.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">grid, overflow</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="grid grid-cols-[80px_minmax(0,1fr)] gap-2"><div class="bg-slate-200 p-2 text-xs">80px</div><p class="truncate bg-pink-100 p-2 text-xs m-0">LongTextOverflowFixWithMinmax</p></div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> grid-cols-[80px_minmax(0,1fr)]</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

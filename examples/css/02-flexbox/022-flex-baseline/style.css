@@ -1,0 +1,6 @@
+/* 022 — align-items: baseline */
+
+.base-row { display: flex; align-items: baseline; gap: 1rem; padding: 1rem; background: #f8fafc; border-radius: 0.5rem; }
+.base-lg { font-size: 2rem; }
+.base-sm { font-size: 0.75rem; }
+.base-md { font-size: 1.25rem; }

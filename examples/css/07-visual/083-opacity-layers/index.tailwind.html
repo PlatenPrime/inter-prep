@@ -1,0 +1,38 @@
+<!--
+  083 — Opacity layers
+  @tags visual
+  @difficulty easy
+
+  Полупрозрачные слои; opacity создаёт stacking context.
+  На собесе: rgba vs opacity на родителе.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>083 — Opacity layers (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>083 — Opacity layers</h1>
+      <p class="demo-task">Полупрозрачные слои; opacity создаёт stacking context.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">visual</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="flex gap-2"><div class="px-6 py-4 bg-blue-600 text-white rounded-md text-sm opacity-80">80%</div><div class="px-6 py-4 bg-blue-600 text-white rounded-md text-sm opacity-60">60%</div></div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> opacity-80 opacity-60</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

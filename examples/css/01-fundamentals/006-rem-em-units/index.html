@@ -1,0 +1,42 @@
+<!--
+  006 — rem vs em
+  @tags fundamentals, units
+  @difficulty easy
+
+  rem от root, em от родителя — размер шрифта вложенных элементов.
+  На собесе: Когда em ломает вложенность; rem для spacing scale.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>006 — rem vs em (Pure CSS)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>006 — rem vs em</h1>
+      <p class="demo-task">rem от root, em от родителя — размер шрифта вложенных элементов.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">fundamentals, units</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Pure CSS</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="em-parent">
+        Parent 20px
+        <p class="em-child">Child 1.5em = 30px</p>
+      </div>
+      <p class="rem-child">1.25rem от html root</p>
+    </div>
+    
+    
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

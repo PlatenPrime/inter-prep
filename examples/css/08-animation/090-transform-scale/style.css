@@ -1,0 +1,4 @@
+/* 090 — Transform scale */
+
+.scale-card { display: inline-block; padding: 1.5rem 2rem; background: #fbbf24; border-radius: 0.5rem; font-weight: 600; font-size: 0.875rem; transition: transform 0.2s ease; cursor: pointer; }
+.scale-card:hover { transform: scale(1.05); }

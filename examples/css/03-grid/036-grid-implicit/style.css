@@ -1,0 +1,4 @@
+/* 036 — Implicit tracks */
+
+.implicit { display: grid; grid-template-columns: repeat(2, 1fr); grid-auto-rows: 60px; gap: 0.35rem; }
+.implicit > div { background: #6ee7b7; border-radius: 0.25rem; display: flex; align-items: center; justify-content: center; font-size: 0.875rem; }

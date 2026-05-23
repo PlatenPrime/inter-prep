@@ -1,0 +1,38 @@
+<!--
+  040 — Grid vs Flex when
+  @tags grid, flex
+  @difficulty easy
+
+  Сравнение: flex — 1D ряд, grid — 2D сетка.
+  На собесе: Content-driven flex; layout shell grid.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>040 — Grid vs Flex when (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>040 — Grid vs Flex when</h1>
+      <p class="demo-task">Сравнение: flex — 1D ряд, grid — 2D сетка.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">grid, flex</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="grid grid-cols-2 gap-4"><div class="flex gap-1 p-2 bg-blue-100 rounded"><span class="flex-1 py-2 bg-blue-600 text-white text-xs text-center rounded">F1</span><span class="flex-1 py-2 bg-blue-600 text-white text-xs text-center rounded">F2</span></div><div class="grid grid-cols-2 gap-1 p-2 bg-green-100 rounded"><span class="py-2 bg-green-600 text-white text-xs text-center rounded">G1</span><span class="py-2 bg-green-600 text-white text-xs text-center rounded">G2</span><span class="py-2 bg-green-600 text-white text-xs text-center rounded">G3</span><span class="py-2 bg-green-600 text-white text-xs text-center rounded">G4</span></div></div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> flex для 1D; grid для 2D</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

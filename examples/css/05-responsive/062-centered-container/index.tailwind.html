@@ -1,0 +1,38 @@
+<!--
+  062 — Centered container
+  @tags responsive, layout
+  @difficulty easy
+
+  max-width + margin: 0 auto + horizontal padding.
+  На собесе: container queries vs fixed max-width.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>062 — Centered container (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>062 — Centered container</h1>
+      <p class="demo-task">max-width + margin: 0 auto + horizontal padding.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">responsive, layout</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="w-full max-w-lg mx-auto px-4 bg-white border border-slate-200 rounded-lg"><p class="py-4 m-0 text-sm">max-w-lg mx-auto px-4</p></div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> max-w-lg mx-auto px-4</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

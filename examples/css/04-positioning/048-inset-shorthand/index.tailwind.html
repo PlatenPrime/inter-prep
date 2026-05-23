@@ -1,0 +1,38 @@
+<!--
+  048 — inset shorthand
+  @tags position
+  @difficulty easy
+
+  inset: 0 растягивает absolute на весь родитель.
+  На собесе: Замена top/right/bottom/left: 0.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>048 — inset shorthand (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>048 — inset shorthand</h1>
+      <p class="demo-task">inset: 0 растягивает absolute на весь родитель.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">position</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="relative min-h-[120px] bg-slate-200 rounded-lg"><div class="absolute inset-3 bg-teal-600 text-white flex items-center justify-center rounded text-sm">inset-3</div></div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> inset-3 → inset: 0.75rem</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

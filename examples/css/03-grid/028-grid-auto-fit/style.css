@@ -1,0 +1,4 @@
+/* 028 — auto-fit minmax cards */
+
+.auto-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 0.5rem; }
+.auto-grid > div { padding: 1.5rem 0.5rem; background: #a5b4fc; border-radius: 0.375rem; text-align: center; font-weight: 600; font-size: 0.875rem; }

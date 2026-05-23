@@ -1,0 +1,41 @@
+<!--
+  001 — Box model
+  @tags fundamentals, box-model
+  @difficulty easy
+
+  Визуализируй content, padding, border, margin. Переключи box-sizing.
+  На собесе: content-box vs border-box; что входит в width.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>001 — Box model (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>001 — Box model</h1>
+      <p class="demo-task">Визуализируй content, padding, border, margin. Переключи box-sizing.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">fundamentals, box-model</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="flex flex-wrap gap-6">
+        <div class="w-[140px] h-20 bg-blue-300 border-4 border-blue-600 p-3 m-4 text-xs font-semibold flex items-center justify-center box-content">content-box (default)</div>
+        <div class="w-[140px] h-20 bg-green-300 border-4 border-green-600 p-3 m-4 text-xs font-semibold flex items-center justify-center box-border">box-border</div>
+      </div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> box-border → box-sizing: border-box; w-[140px] → width: 140px</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

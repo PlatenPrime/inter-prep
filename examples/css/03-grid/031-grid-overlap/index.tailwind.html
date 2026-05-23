@@ -1,0 +1,38 @@
+<!--
+  031 — Grid overlap
+  @tags grid
+  @difficulty medium
+
+  Несколько элементов в одной ячейке (stack).
+  На собесе: Один grid-area; z-index для порядка.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>031 — Grid overlap (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>031 — Grid overlap</h1>
+      <p class="demo-task">Несколько элементов в одной ячейке (stack).</p>
+      <div class="demo-meta">
+        <span class="demo-badge">grid</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="grid max-w-[200px]"><img class="col-start-1 row-start-1 rounded-lg w-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='120'%3E%3Crect fill='%2394a3b8' width='200' height='120'/%3E%3C/svg%3E" alt="" width="200" height="120" /><span class="col-start-1 row-start-1 self-end justify-self-start m-2 px-2 py-1 bg-red-600 text-white text-xs rounded">Badge</span></div>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> col-start-1 row-start-1 — stack in one cell</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

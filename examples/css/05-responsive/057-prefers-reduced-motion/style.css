@@ -1,0 +1,5 @@
+/* 057 — prefers-reduced-motion */
+
+.motion-box { width: 48px; height: 48px; background: #2563eb; border-radius: 0.5rem; animation: pulse 1s ease infinite alternate; }
+@keyframes pulse { to { transform: scale(1.15); opacity: 0.7; } }
+@media (prefers-reduced-motion: reduce) { .motion-box { animation: none; } }

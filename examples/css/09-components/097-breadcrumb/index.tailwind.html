@@ -1,0 +1,38 @@
+<!--
+  097 — Breadcrumb
+  @tags components, nav
+  @difficulty easy
+
+  Цепочка навигации с разделителем.
+  На собесе: aria-current="page"; семантика nav ol.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>097 — Breadcrumb (Tailwind CDN)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>097 — Breadcrumb</h1>
+      <p class="demo-task">Цепочка навигации с разделителем.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">components, nav</span>
+        <span class="demo-badge demo-badge--easy">easy</span>
+        <span class="demo-badge">Tailwind CDN</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <nav aria-label="Breadcrumb"><ol class="flex flex-wrap gap-1 list-none m-0 p-0 text-sm"><li class="after:content-['/'] after:ml-1 after:text-slate-400"><a href="#" class="text-blue-600 no-underline">Home</a></li><li class="after:content-['/'] after:ml-1 after:text-slate-400"><a href="#" class="text-blue-600 no-underline">Products</a></li><li class="text-slate-500" aria-current="page">Item</li></ol></nav>
+    </div>
+    
+    <p class="demo-hint"><strong>CSS ↔ Tailwind:</strong> after:content-['/'] for separator</p>
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

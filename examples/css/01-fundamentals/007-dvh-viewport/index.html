@@ -1,0 +1,38 @@
+<!--
+  007 — dvh vs vh
+  @tags fundamentals, viewport
+  @difficulty medium
+
+  100vh на мобильных обрезается UI браузера; dvh/svh/lvh.
+  На собесе: Mobile Safari 100vh bug; когда использовать dvh.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>007 — dvh vs vh (Pure CSS)</title>
+  <link rel="stylesheet" href="../../_shared/reset.css" />
+  <link rel="stylesheet" href="../../_shared/demo.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-header">
+      <h1>007 — dvh vs vh</h1>
+      <p class="demo-task">100vh на мобильных обрезается UI браузера; dvh/svh/lvh.</p>
+      <div class="demo-meta">
+        <span class="demo-badge">fundamentals, viewport</span>
+        <span class="demo-badge demo-badge--medium">medium</span>
+        <span class="demo-badge">Pure CSS</span>
+      </div>
+    </header>
+    <div class="demo-stage">
+      <div class="vh-panel">min-height: 40dvh (адаптивная «вьюпорт» высота)</div>
+    </div>
+    
+    
+    <nav class="demo-nav"><a href="../../index.html">← Все примеры</a></nav>
+  </div>
+</body>
+</html>

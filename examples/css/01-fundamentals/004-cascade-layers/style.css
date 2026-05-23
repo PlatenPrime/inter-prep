@@ -1,0 +1,5 @@
+/* 004 — Cascade layers */
+
+@layer base, theme;
+@layer base { .layered-btn { background: #94a3b8; color: #fff; border: none; padding: 0.5rem 1rem; border-radius: 0.375rem; } }
+@layer theme { .layered-btn { background: #2563eb; } }
