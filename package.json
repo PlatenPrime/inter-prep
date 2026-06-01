@@ -6,6 +6,8 @@
   "type": "module",
   "scripts": {
     "examples:js": "node examples/js/run-all.mjs",
+    "examples:ts": "node examples/ts/run-all.mjs",
+    "generate:examples-ts": "node scripts/generate-examples-ts.mjs",
     "examples:css": "node examples/css/run-check.mjs",
     "examples:css:serve": "npx --yes serve examples/css -p 4173",
     "test": "node scripts/test-all-days.mjs",

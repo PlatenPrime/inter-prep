@@ -15,6 +15,6 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["days/**/*.ts"],
+  "include": ["days/**/*.ts", "examples/ts/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }
