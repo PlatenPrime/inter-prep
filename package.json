@@ -6,6 +6,9 @@
   "type": "module",
   "scripts": {
     "examples:js": "node examples/js/run-all.mjs",
+    "js-tasks": "node js-tasks/run-all.mjs",
+    "js-tasks:verify": "node scripts/verify-js-tasks.mjs",
+    "js-tasks:generate": "node scripts/generate-js-tasks.mjs",
     "examples:ts": "node examples/ts/run-all.mjs",
     "examples:react": "vitest run examples/react",
     "examples:react:watch": "vitest examples/react",

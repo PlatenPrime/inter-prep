@@ -15,6 +15,15 @@
 3. **90–120 мин** — реши задачи в `tasks/`
 4. **30–60 мин** — повтори вчерашний день + self-check из README
 
+## JS-практика (100 задач)
+
+Отдельный банк **[js-tasks/](js-tasks/)** — 100 задач: `task.js` + `task.test.js` для практики, `solution.md` + `solution.js` для самопроверки после попытки. Сложность от easy до middle, нумерация `001`–`100`.
+
+```bash
+node js-tasks/001-is-primitive/task.test.js
+npm run js-tasks
+```
+
 ## Запуск задач
 
 ```bash
