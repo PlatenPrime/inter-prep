@@ -24,6 +24,17 @@ node js-tasks/001-is-primitive/task.test.js
 npm run js-tasks
 ```
 
+## Углублённые спринты (~10 ч)
+
+Опциональные экспертные модули в **[sprints/](sprints/)** — теория + практика + 30–40 drill-задач:
+
+| Спринт | После | Команды |
+|--------|-------|---------|
+| [Event Loop](sprints/sprint-event-loop/) | day-08, day-36 | `npm run sprint-event-loop`, `npm run sprint-event-loop:drills` |
+| [`this`](sprints/sprint-this/) | day-07, js-tasks 041–044 | `npm run sprint-this`, `npm run sprint-this:drills` |
+
+Генерация контента: `npm run sprints:generate`
+
 ## Запуск задач
 
 ```bash

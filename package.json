@@ -77,7 +77,13 @@
     "day-27": "npx tsx days/day-27-react-composition/tasks/run-all.ts",
     "day-28": "npx tsx days/day-28-react-error-suspense/tasks/run-all.ts",
     "day-29": "npx tsx days/day-29-react-router-data/tasks/run-all.ts",
-    "day-30": "npx tsx days/day-30-react-tailwind-patterns/tasks/run-all.ts"
+    "day-30": "npx tsx days/day-30-react-tailwind-patterns/tasks/run-all.ts",
+    "sprint-event-loop": "node sprints/sprint-event-loop/practice/run-all.js",
+    "sprint-event-loop:drills": "node sprints/sprint-event-loop/drills/run-check-all.mjs",
+    "sprint-this": "node sprints/sprint-this/practice/run-all.js",
+    "sprint-this:drills": "node sprints/sprint-this/drills/run-check-all.mjs",
+    "sprints:generate": "node scripts/generate-sprints.mjs",
+    "sprints:verify": "node scripts/verify-sprint-drills.mjs"
   },
   "engines": {
     "node": ">=20"

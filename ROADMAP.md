@@ -62,3 +62,10 @@
 | 58 | `day-58-system-design-lite` | Monolith vs microservices |
 | 59 | `day-59-mock-fullstack-1` | Mixed mock + live coding |
 | 60 | `day-60-mock-fullstack-2` | Behavioral + system recap |
+
+## Optional expert sprints
+
+| Sprint | Folder | When | Focus |
+|--------|--------|------|-------|
+| Event Loop | `sprints/sprint-event-loop` | After days 08 + 36 | Browser + Node, 38 drills |
+| this | `sprints/sprint-this` | After day 07 | Binding rules, 35 drills |
