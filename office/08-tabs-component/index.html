@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>08 — Tabs Component</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Компонент вкладок</h1>
+    <p class="task-desc">
+      Задание: переключение вкладок по клику. Активная вкладка и панель связаны через data-tab.
+      aria-selected, role="tablist". Стрелки влево/вправо для навигации с клавиатуры.
+    </p>
+  </header>
+
+  <div class="tabs" id="tabs">
+    <div class="tabs__list" role="tablist" aria-label="Настройки">
+      <button type="button" role="tab" id="tab-profile" class="tabs__tab tabs__tab--active" aria-selected="true" aria-controls="panel-profile" data-tab="profile">
+        Профиль
+      </button>
+      <button type="button" role="tab" id="tab-security" class="tabs__tab" aria-selected="false" aria-controls="panel-security" data-tab="security" tabindex="-1">
+        Безопасность
+      </button>
+      <button type="button" role="tab" id="tab-notifications" class="tabs__tab" aria-selected="false" aria-controls="panel-notifications" data-tab="notifications" tabindex="-1">
+        Уведомления
+      </button>
+    </div>
+
+    <div class="tabs__panels">
+      <div role="tabpanel" id="panel-profile" class="tabs__panel" aria-labelledby="tab-profile">
+        <h2>Профиль</h2>
+        <p>Имя, email, аватар. Здесь форма редактирования профиля пользователя.</p>
+      </div>
+      <div role="tabpanel" id="panel-security" class="tabs__panel" hidden aria-labelledby="tab-security">
+        <h2>Безопасность</h2>
+        <p>Смена пароля, двухфакторная аутентификация, активные сессии.</p>
+      </div>
+      <div role="tabpanel" id="panel-notifications" class="tabs__panel" hidden aria-labelledby="tab-notifications">
+        <h2>Уведомления</h2>
+        <p>Email-рассылки, push-уведомления, настройки частоты.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

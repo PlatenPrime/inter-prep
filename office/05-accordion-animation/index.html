@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>05 — Accordion Animation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Аккордеон FAQ</h1>
+    <p class="task-desc">
+      Задание: список вопросов-ответов. Клик раскрывает панель с анимацией.
+      Одновременно открыт только один пункт. aria-expanded, aria-hidden.
+    </p>
+  </header>
+
+  <main class="accordion" id="accordion">
+    <div class="accordion__item">
+      <h2>
+        <button type="button" class="accordion__trigger" aria-expanded="false" aria-controls="panel-1" id="trigger-1">
+          Как подготовиться к офисному этапу?
+        </button>
+      </h2>
+      <div class="accordion__panel" id="panel-1" role="region" aria-labelledby="trigger-1" hidden>
+        <p>Повторите Flexbox, Grid, position, базовый DOM API. Решайте задачи на время без автодополнения.</p>
+      </div>
+    </div>
+
+    <div class="accordion__item">
+      <h2>
+        <button type="button" class="accordion__trigger" aria-expanded="false" aria-controls="panel-2" id="trigger-2">
+          Сколько времени дают на задачу?
+        </button>
+      </h2>
+      <div class="accordion__panel" id="panel-2" role="region" aria-labelledby="trigger-2" hidden>
+        <p>Обычно 1.5–2 часа. Оценивают рабочий результат, чистоту кода и умение объяснить решение.</p>
+      </div>
+    </div>
+
+    <div class="accordion__item">
+      <h2>
+        <button type="button" class="accordion__trigger" aria-expanded="false" aria-controls="panel-3" id="trigger-3">
+          Нужны ли фреймворки?
+        </button>
+      </h2>
+      <div class="accordion__panel" id="panel-3" role="region" aria-labelledby="trigger-3" hidden>
+        <p>Часто — нет. Vanilla HTML/CSS/JS проверяют фундамент. React могут дать на другом этапе.</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

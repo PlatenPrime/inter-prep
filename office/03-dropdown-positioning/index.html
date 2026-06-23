@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>03 — Dropdown Positioning</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Dropdown Menu</h1>
+    <p class="task-desc">
+      Задание: кнопка открывает выпадающее меню. Позиционирование через absolute.
+      Закрытие по клику вне и по Escape. aria-expanded.
+    </p>
+  </header>
+
+  <main class="demo">
+    <div class="dropdown" id="dropdown">
+      <button
+        type="button"
+        class="dropdown__trigger"
+        id="dropdownTrigger"
+        aria-haspopup="true"
+        aria-expanded="false"
+        aria-controls="dropdownMenu"
+      >
+        Действия ▾
+      </button>
+      <ul class="dropdown__menu" id="dropdownMenu" role="menu" hidden>
+        <li role="none"><button type="button" role="menuitem" data-action="edit">Редактировать</button></li>
+        <li role="none"><button type="button" role="menuitem" data-action="duplicate">Дублировать</button></li>
+        <li role="none"><button type="button" role="menuitem" data-action="archive">В архив</button></li>
+        <li role="separator" class="dropdown__divider"></li>
+        <li role="none"><button type="button" role="menuitem" data-action="delete" class="dropdown__danger">Удалить</button></li>
+      </ul>
+    </div>
+
+    <output class="log" id="log" for="dropdown">Выберите действие из меню</output>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

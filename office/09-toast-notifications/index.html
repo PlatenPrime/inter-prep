@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>09 — Toast Notifications</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Toast-уведомления</h1>
+    <p class="task-desc">
+      Задание: кнопки показывают всплывающие уведомления. Анимация появления/исчезновения через @keyframes.
+      Авто-закрытие через 3 сек. Несколько тостов стекаются.
+    </p>
+  </header>
+
+  <main class="demo">
+    <button type="button" class="btn btn--success" data-toast="success">Успех</button>
+    <button type="button" class="btn btn--error" data-toast="error">Ошибка</button>
+    <button type="button" class="btn btn--info" data-toast="info">Информация</button>
+  </main>
+
+  <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --sidebar-width: 14rem;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+  color: #0f172a;
+  background: #e2e8f0;
+}
+
+.layout {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  gap: 0;
+}
+
+.layout__header {
+  grid-area: header;
+  padding: 1rem 1.5rem;
+  background: #1e293b;
+  color: #f8fafc;
+}
+
+.layout__header h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.25rem;
+}
+
+.task-desc {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #94a3b8;
+  max-width: 36rem;
+}
+
+.layout__sidebar {
+  display: none;
+  background: #fff;
+  border-right: 1px solid #cbd5e1;
+  padding: 1rem 0;
+}
+
+.layout__sidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.layout__sidebar a {
+  display: block;
+  padding: 0.5rem 1.25rem;
+  color: #334155;
+  text-decoration: none;
+}
+
+.layout__sidebar a:hover {
+  background: #f1f5f9;
+}
+
+.layout__main {
+  grid-area: main;
+  padding: 1.5rem;
+  background: #f8fafc;
+}
+
+.layout__aside {
+  display: none;
+  padding: 1rem;
+  background: #fff;
+  border-left: 1px solid #cbd5e1;
+}
+
+.layout__footer {
+  grid-area: footer;
+  padding: 0.75rem 1.5rem;
+  background: #1e293b;
+  color: #94a3b8;
+  font-size: 0.875rem;
+}
+
+.layout__footer p {
+  margin: 0;
+}
+
+.widget {
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background: #f1f5f9;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: #2563eb;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+}
+
+.layout--collapsed {
+  --sidebar-width: 4rem;
+}
+
+.layout--collapsed .layout__sidebar a {
+  font-size: 0;
+  text-align: center;
+}
+
+@media (min-width: 48rem) {
+  .layout {
+    grid-template-columns: var(--sidebar-width) 1fr minmax(10rem, 16rem);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      'header header header'
+      'sidebar main aside'
+      'footer footer footer';
+  }
+
+  .layout__sidebar,
+  .layout__aside {
+    display: block;
+  }
+}

@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+  color: #0f172a;
+  background: #f1f5f9;
+}
+
+.page-header {
+  padding: 1.5rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.task-desc {
+  color: #475569;
+  max-width: 40rem;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  padding: 0 1.5rem 2rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.card {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgb(15 23 42 / 0.1);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px rgb(15 23 42 / 0.12);
+  transform: translateY(-2px);
+}
+
+.card__image {
+  aspect-ratio: 16 / 10;
+  background: linear-gradient(135deg, #94a3b8, #64748b);
+  object-fit: cover;
+  width: 100%;
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1rem 1.25rem 1.25rem;
+  gap: 0.5rem;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.card__price {
+  margin: 0;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.card__desc {
+  margin: 0;
+  flex: 1;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.card__btn {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: #2563eb;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.card__btn:hover {
+  background: #1d4ed8;
+}
+
+@media (min-width: 36rem) {
+  .card {
+    flex: 1 1 calc(50% - 0.625rem);
+    max-width: calc(50% - 0.625rem);
+  }
+}
+
+@media (min-width: 56rem) {
+  .card {
+    flex: 1 1 calc(33.333% - 0.834rem);
+    max-width: calc(33.333% - 0.834rem);
+  }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10 — Drag and Drop List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Drag & Drop список</h1>
+    <p class="task-desc">
+      Задание: список задач можно перетаскивать для изменения порядка.
+      HTML5 Drag and Drop API. Визуальная подсветка места вставки.
+    </p>
+  </header>
+
+  <main class="demo">
+    <ul class="dnd-list" id="dndList">
+      <li class="dnd-item" draggable="true" data-id="1">
+        <span class="dnd-item__handle" aria-hidden="true">⠿</span>
+        <span class="dnd-item__text">Настроить окружение</span>
+      </li>
+      <li class="dnd-item" draggable="true" data-id="2">
+        <span class="dnd-item__handle" aria-hidden="true">⠿</span>
+        <span class="dnd-item__text">Сверстать макет</span>
+      </li>
+      <li class="dnd-item" draggable="true" data-id="3">
+        <span class="dnd-item__handle" aria-hidden="true">⠿</span>
+        <span class="dnd-item__text">Написать логику</span>
+      </li>
+      <li class="dnd-item" draggable="true" data-id="4">
+        <span class="dnd-item__handle" aria-hidden="true">⠿</span>
+        <span class="dnd-item__text">Проверить в браузере</span>
+      </li>
+      <li class="dnd-item" draggable="true" data-id="5">
+        <span class="dnd-item__handle" aria-hidden="true">⠿</span>
+        <span class="dnd-item__text">Объяснить решение</span>
+      </li>
+    </ul>
+
+    <output class="order-log" id="orderLog">Порядок: 1, 2, 3, 4, 5</output>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

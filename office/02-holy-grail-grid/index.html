@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>02 — Holy Grail Grid</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="layout" id="layout">
+    <header class="layout__header">
+      <h1>Holy Grail Layout</h1>
+      <p class="task-desc">
+        Задание: header, footer, sidebar слева, основной контент и aside справа.
+        На мобильном — одна колонка. CSS Grid.
+      </p>
+    </header>
+
+    <nav class="layout__sidebar" aria-label="Навигация">
+      <ul>
+        <li><a href="#">Дашборд</a></li>
+        <li><a href="#">Проекты</a></li>
+        <li><a href="#">Команда</a></li>
+        <li><a href="#">Настройки</a></li>
+      </ul>
+    </nav>
+
+    <main class="layout__main">
+      <h2>Основной контент</h2>
+      <p>Здесь располагается главная область приложения. Grid позволяет задать области именами и легко перестроить лейаут на разных экранах.</p>
+      <p>Кнопка ниже переключает компактный режим сайдбара через JS и CSS custom property.</p>
+      <button type="button" id="toggleSidebar" class="btn">Свернуть сайдбар</button>
+    </main>
+
+    <aside class="layout__aside" aria-label="Виджеты">
+      <h3>Виджеты</h3>
+      <div class="widget">Статистика: 128 задач</div>
+      <div class="widget">Онлайн: 12 человек</div>
+    </aside>
+
+    <footer class="layout__footer">
+      <p>© 2026 Office Practice</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

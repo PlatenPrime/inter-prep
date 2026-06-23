@@ -1,0 +1,84 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+  color: #0f172a;
+  background: #f1f5f9;
+}
+
+.page-header {
+  padding: 1.5rem;
+}
+
+.task-desc {
+  color: #475569;
+  max-width: 40rem;
+}
+
+.tabs {
+  max-width: 36rem;
+  margin: 0 auto 2rem;
+  padding: 0 1.5rem;
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgb(15 23 42 / 0.1);
+  overflow: hidden;
+}
+
+.tabs__list {
+  display: flex;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.tabs__tab {
+  flex: 1;
+  padding: 0.875rem 1rem;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  font: inherit;
+  font-weight: 500;
+  color: #64748b;
+  cursor: pointer;
+  margin-bottom: -1px;
+}
+
+.tabs__tab:hover {
+  color: #334155;
+  background: #f8fafc;
+}
+
+.tabs__tab--active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+}
+
+.tabs__tab:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: -2px;
+}
+
+.tabs__panels {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.tabs__panel h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.125rem;
+}
+
+.tabs__panel p {
+  margin: 0;
+  color: #475569;
+  font-size: 0.9375rem;
+}
+
+.tabs__panel[hidden] {
+  display: none;
+}

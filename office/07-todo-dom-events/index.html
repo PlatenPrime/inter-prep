@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>07 — Todo DOM Events</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app__header">
+      <h1>Todo List</h1>
+      <p class="task-desc">
+        Задание: добавление задач, отметка выполненных, удаление, фильтры All / Active / Done.
+        Один обработчик через делегирование событий.
+      </p>
+    </header>
+
+    <form class="todo-form" id="todoForm">
+      <input
+        type="text"
+        id="todoInput"
+        class="todo-form__input"
+        placeholder="Новая задача…"
+        autocomplete="off"
+        required
+        aria-label="Текст задачи"
+      />
+      <button type="submit" class="btn btn--primary">Добавить</button>
+    </form>
+
+    <div class="todo-filters" role="tablist" aria-label="Фильтр задач">
+      <button type="button" class="filter filter--active" data-filter="all">Все</button>
+      <button type="button" class="filter" data-filter="active">Активные</button>
+      <button type="button" class="filter" data-filter="done">Выполненные</button>
+    </div>
+
+    <ul class="todo-list" id="todoList" aria-live="polite"></ul>
+
+    <footer class="app__footer">
+      <span id="itemsLeft">0 задач</span>
+      <button type="button" class="btn btn--text" id="clearDone" hidden>Очистить выполненные</button>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
