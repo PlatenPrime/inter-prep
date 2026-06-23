@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>11 — Hamburger Menu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="#" class="site-header__logo">InterPrep</a>
+
+    <nav class="header__nav" aria-label="Основная навигация">
+      <ul class="header__nav-list">
+        <li><a href="#home" class="header__nav-link">Главная</a></li>
+        <li><a href="#about" class="header__nav-link">О нас</a></li>
+        <li><a href="#services" class="header__nav-link">Услуги</a></li>
+        <li><a href="#contact" class="header__nav-link">Контакты</a></li>
+      </ul>
+    </nav>
+
+    <button
+      type="button"
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Открыть меню"
+      aria-expanded="false"
+      aria-controls="mobileNav"
+    >
+      <span class="menu-toggle__bar" aria-hidden="true"></span>
+      <span class="menu-toggle__bar" aria-hidden="true"></span>
+      <span class="menu-toggle__bar" aria-hidden="true"></span>
+    </button>
+  </header>
+
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true" hidden></div>
+
+  <nav
+    class="mobile-nav"
+    id="mobileNav"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Мобильное меню"
+    aria-hidden="true"
+    hidden
+  >
+    <ul class="mobile-nav__list">
+      <li><a href="#home" class="mobile-nav__link">Главная</a></li>
+      <li><a href="#about" class="mobile-nav__link">О нас</a></li>
+      <li><a href="#services" class="mobile-nav__link">Услуги</a></li>
+      <li><a href="#contact" class="mobile-nav__link">Контакты</a></li>
+    </ul>
+  </nav>
+
+  <main class="page-content">
+    <h1>Бургер-меню</h1>
+    <p class="task-desc">
+      Задание: адаптивная навигация. На десктопе — горизонтальное меню в шапке.
+      На мобильном — бургер с анимацией (3 полоски → крестик), slide-in панель слева,
+      overlay, блокировка скролла, закрытие по Escape и клику вне. aria-expanded, focus management.
+    </p>
+    <p>Сузьте окно браузера (&lt; 768px) или откройте DevTools в mobile-режиме, чтобы увидеть бургер.</p>
+
+    <section id="home" class="content-section">
+      <h2>Главная</h2>
+      <p>Демо-контент для прокрутки страницы при открытом меню.</p>
+    </section>
+    <section id="about" class="content-section">
+      <h2>О нас</h2>
+      <p>Проверьте: при открытом меню body не скроллится.</p>
+    </section>
+    <section id="services" class="content-section">
+      <h2>Услуги</h2>
+      <p>Пункты меню появляются с stagger-анимацией.</p>
+    </section>
+    <section id="contact" class="content-section">
+      <h2>Контакты</h2>
+      <p>Клик по ссылке закрывает мобильное меню.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
