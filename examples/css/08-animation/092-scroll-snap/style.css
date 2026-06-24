@@ -1,4 +1,18 @@
 /* 092 — Scroll snap carousel */
 
-.snap-track { display: flex; gap: 0.5rem; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 0.5rem; }
-.snap-item { flex: 0 0 80%; scroll-snap-align: center; padding: 2rem 1rem; background: #c7d2fe; border-radius: 0.5rem; text-align: center; font-weight: 600; }
+.snap-track {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  padding-bottom: 0.5rem;
+}
+.snap-item {
+  flex: 0 0 80%;
+  scroll-snap-align: start;
+  padding: 2rem 1rem;
+  background: #c7d2fe;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 600;
+}

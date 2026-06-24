@@ -6,7 +6,12 @@
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
   line-height: 1.5;
   color: #0f172a;
   background: #f1f5f9;
@@ -40,7 +45,9 @@ body {
   border-radius: 0.75rem;
   overflow: hidden;
   box-shadow: 0 1px 3px rgb(15 23 42 / 0.1);
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
 }
 
 .card:hover {

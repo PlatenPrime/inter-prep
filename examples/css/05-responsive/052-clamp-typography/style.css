@@ -1,3 +1,8 @@
 /* 052 — clamp() typography */
 
-.fluid-h { margin: 0; font-size: clamp(1.25rem, 2vw + 1rem, 2rem); line-height: 1.2; color: #1e40af; }
+.fluid-h {
+  margin: 0;
+  font-size: clamp(1.25rem, 10vw, 4rem);
+  line-height: 1.2;
+  color: #1e40af;
+}
