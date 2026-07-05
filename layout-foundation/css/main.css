@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Main — точка входа, импорт всех слоёв
+   ========================================================================== */
+
+@import url("reset.css");
+@import url("tokens.css");
+@import url("layout.css");
+@import url("typography.css");
+@import url("components.css");
+
+/* --- Page-level --- */
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page__main {
+  flex: 1;
+}
+
+/* --- Визуальная подсказка для учебных зон --- */
+.zone-label {
+  display: inline-block;
+  margin-block-end: var(--space-3);
+  padding: var(--space-1) var(--space-2);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  background: rgb(0 0 0 / 0.06);
+  border-radius: var(--radius-sm);
+}

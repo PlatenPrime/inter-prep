@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Layout Foundation — универсальный макет</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="page">
+  <!-- ============================================================
+       HEADER — sticky шапка, навигация (desktop: в ряд, mobile: dropdown)
+       ============================================================ -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="#" class="site-header__logo">Layout Foundation</a>
+
+      <button
+        type="button"
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Открыть меню"
+        aria-expanded="false"
+        aria-controls="mainNav"
+      >
+        <span class="menu-toggle__icon" aria-hidden="true"></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Основная навигация">
+        <ul class="main-nav__list">
+          <li><a href="#hero" class="main-nav__link">Главная</a></li>
+          <li><a href="#sidebar" class="main-nav__link">Sidebar</a></li>
+          <li><a href="#grid" class="main-nav__link">Сетка</a></li>
+          <li><a href="#position" class="main-nav__link">Позиционирование</a></li>
+          <li><a href="#hero" class="main-nav__link">Главная</a></li>
+          <li><a href="#sidebar" class="main-nav__link">Sidebar</a></li>
+          <li><a href="#grid" class="main-nav__link">Сетка</a></li>
+          <li><a href="#position" class="main-nav__link">Позиционирование</a></li>
+          <li><a href="#hero" class="main-nav__link">Главная</a></li>
+          <li><a href="#sidebar" class="main-nav__link">Sidebar</a></li>
+          <li><a href="#grid" class="main-nav__link">Сетка</a></li>
+          <li><a href="#position" class="main-nav__link">Позиционирование</a></li>
+          <li><a href="#hero" class="main-nav__link">Главная</a></li>
+          <li><a href="#sidebar" class="main-nav__link">Sidebar</a></li>
+          <li><a href="#grid" class="main-nav__link">Сетка</a></li>
+          <li><a href="#position" class="main-nav__link">Позиционирование</a></li>
+          <li><a href="#hero" class="main-nav__link">Главная</a></li>
+          <li><a href="#sidebar" class="main-nav__link">Sidebar</a></li>
+          <li><a href="#grid" class="main-nav__link">Сетка</a></li>
+          <li><a href="#position" class="main-nav__link">Позиционирование</a></li>
+          <li><a href="#hero" class="main-nav__link">Главная</a></li>
+          <li><a href="#sidebar" class="main-nav__link">Sidebar</a></li>
+          <li><a href="#grid" class="main-nav__link">Сетка</a></li>
+          <li><a href="#position" class="main-nav__link">Позиционирование</a></li>
+          <li><a href="#hero" class="main-nav__link">Главная</a></li>
+          <li><a href="#sidebar" class="main-nav__link">Sidebar</a></li>
+          <li><a href="#grid" class="main-nav__link">Сетка</a></li>
+          <li><a href="#position" class="main-nav__link">Позиционирование</a></li>
+          <li><a href="#hero" class="main-nav__link">Главная</a></li>
+          <li><a href="#sidebar" class="main-nav__link">Sidebar</a></li>
+          <li><a href="#grid" class="main-nav__link">Сетка</a></li>
+          <li><a href="#position" class="main-nav__link">Позиционирование</a></li>
+          <li><a href="#hero" class="main-nav__link">Главная</a></li>
+          <li><a href="#sidebar" class="main-nav__link">Sidebar</a></li>
+          <li><a href="#grid" class="main-nav__link">Сетка</a></li>
+          <li><a href="#position" class="main-nav__link">Позиционирование</a></li>
+          <li><a href="#hero" class="main-nav__link">Главная</a></li>
+          <li><a href="#sidebar" class="main-nav__link">Sidebar</a></li>
+          <li><a href="#grid" class="main-nav__link">Сетка</a></li>
+          <li><a href="#position" class="main-nav__link">Позиционирование</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+  <main class="page__main">
+    <!-- ============================================================
+         HERO — stack + типографика
+         ============================================================ -->
+    <section id="hero" class="section section--hero">
+      <div class="container">
+        <div class="stack stack--lg">
+          <div>
+            <span class="text-label">Паттерн: stack + typography</span>
+            <h1>Универсальная база для вёрстки</h1>
+            <p class="lead">
+              Этот макет показывает, как строить структуру страницы из контейнеров,
+              layout-примитивов и компонентов. Сузьте окно браузера, чтобы увидеть адаптив.
+            </p>
+          </div>
+          <div class="cluster">
+            <a href="#sidebar" class="btn btn--primary">Смотреть паттерны</a>
+            <a href="README.md" class="btn btn--outline">Читать гайд</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SIDEBAR LAYOUT — две колонки, на mobile складываются
+         ============================================================ -->
+    <section id="sidebar" class="section">
+      <div class="container">
+        <div class="section-title">
+          <span class="text-label">Паттерн: sidebar-layout</span>
+          <h2>Две колонки: sidebar + main</h2>
+          <p class="text-muted prose">
+            На экранах &lt; 1024px колонки становятся вертикальным стеком.
+            Цветные фоны помогают увидеть границы зон.
+          </p>
+        </div>
+
+        <div class="sidebar-layout">
+          <aside class="sidebar-layout__aside">
+            <span class="zone-label">sidebar</span>
+            <h3>Боковая панель</h3>
+            <p class="text-small text-muted">
+              Фиксированная ширина на desktop (16rem). Меню, фильтры, навигация по разделам.
+            </p>
+            <ul class="list text-small">
+              <li>Пункт 1</li>
+              <li>Пункт 2</li>
+              <li>Пункт 3</li>
+            </ul>
+          </aside>
+
+          <div class="sidebar-layout__main">
+            <span class="zone-label">main</span>
+            <h3>Основной контент</h3>
+            <p class="text-small text-muted">
+              Занимает всё оставшееся пространство (<code>flex: 1</code>).
+              Сюда кладёшь статьи, формы, таблицы.
+            </p>
+            <p>
+              Правило: сначала разметь <strong>скелет</strong> (header → main → footer),
+              потом внутри main — <strong>container</strong>, потом <strong>секции</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         GRID 3 — адаптивная сетка карточек
+         ============================================================ -->
+    <section id="grid" class="section section--grid">
+      <div class="container">
+        <div class="section-title">
+          <span class="text-label">Паттерн: grid-3</span>
+          <h2>Сетка из трёх колонок</h2>
+          <p class="text-muted prose">
+            1 колонка на mobile → 2 на tablet (768px) → 3 на desktop (1024px).
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card card--zone">
+            <h3 class="card__title">Карточка 1</h3>
+            <p class="card__text">
+              Grid автоматически распределяет элементы по колонкам одинаковой ширины.
+            </p>
+          </article>
+          <article class="card card--zone">
+            <h3 class="card__title">Карточка 2</h3>
+            <p class="card__text">
+              Используй grid для каталогов, галерей, дашбордов.
+            </p>
+          </article>
+          <article class="card card--zone">
+            <h3 class="card__title">Карточка 3</h3>
+            <p class="card__text">
+              Gap между ячейками задаётся одним свойством на весь grid.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CLUSTER — горизонтальный ряд с переносом
+         ============================================================ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <span class="text-label">Паттерн: cluster</span>
+          <h2>Кнопки и теги в ряд</h2>
+          <p class="text-muted prose">
+            Cluster — flex с wrap. Элементы переносятся на новую строку, если не помещаются.
+          </p>
+        </div>
+
+        <div class="cluster">
+          <button type="button" class="btn btn--primary">Действие</button>
+          <button type="button" class="btn btn--outline">Отмена</button>
+          <button type="button" class="btn btn--outline">Ещё</button>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">Layout</span>
+          <span class="tag">Responsive</span>
+          <span class="tag">Grid</span>
+          <span class="tag">Flexbox</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         GRID 2 — двухколоночная сетка
+         ============================================================ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <span class="text-label">Паттерн: grid-2</span>
+          <h2>Две колонки</h2>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3 class="card__title">Левая колонка</h3>
+            <p class="card__text">Текст + изображение, форма + описание.</p>
+          </div>
+          <div class="card">
+            <h3 class="card__title">Правая колонка</h3>
+            <p class="card__text">На mobile колонки идут одна под другой.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         POSITIONING — relative + absolute
+         ============================================================ -->
+    <section id="position" class="section">
+      <div class="container">
+        <div class="section-title">
+          <span class="text-label">Паттерн: position relative + absolute</span>
+          <h2>Позиционирование</h2>
+          <p class="text-muted prose">
+            Родитель с <code>position: relative</code> — точка отсчёта.
+            Дочерний <code>position: absolute</code> — привязан к углу родителя.
+          </p>
+        </div>
+
+        <div class="position-demo">
+          <article class="card">
+            <span class="badge">New</span>
+            <h3 class="card__title">Карточка с бейджем</h3>
+            <p class="card__text">
+              Badge в правом верхнем углу. Так же делают tooltips, кнопки закрытия, иконки статуса.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER — сетка колонок на desktop, стек на mobile
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <p class="site-footer__brand">Layout Foundation</p>
+          <p class="text-small text-muted">
+            Базовый шаблон для изучения вёрстки. Скопируй папку и начни свой проект.
+          </p>
+        </div>
+        <div>
+          <p class="text-label">Навигация</p>
+          <ul class="site-footer__links text-small">
+            <li><a href="#hero">Главная</a></li>
+            <li><a href="#sidebar">Sidebar</a></li>
+            <li><a href="#grid">Сетка</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-label">Ресурсы</p>
+          <ul class="site-footer__links text-small">
+            <li><a href="README.md">README</a></li>
+            <li><a href="css/layout.css">layout.css</a></li>
+            <li><a href="css/tokens.css">tokens.css</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="site-footer__bottom">Layout Foundation — учебный макет</p>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>

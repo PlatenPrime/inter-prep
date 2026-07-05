@@ -1,0 +1,144 @@
+/* ==========================================================================
+   Layout — переиспользуемые примитивы раскладки
+   ========================================================================== */
+
+/* --- Контейнер: ограничивает ширину контента и даёт боковые отступы --- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+/* --- Stack: вертикальный поток с равномерным gap --- */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.stack--lg {
+  gap: var(--space-8);
+}
+
+.stack--sm {
+  gap: var(--space-2);
+}
+
+/* --- Cluster: горизонтальный ряд с переносом (кнопки, теги) --- */
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* --- Grid: адаптивные сетки --- */
+.grid-2 {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: 1fr;
+}
+
+.grid-3 {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 48rem) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64rem) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --- Sidebar layout: боковая колонка + основной контент --- */
+.sidebar-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.sidebar-layout__aside {
+  background: var(--zone-sidebar);
+  padding: var(--space-6);
+  border-radius: var(--radius-md);
+}
+
+.sidebar-layout__main {
+  flex: 1;
+  background: var(--zone-main);
+  padding: var(--space-6);
+  border-radius: var(--radius-md);
+}
+
+@media (min-width: 64rem) {
+  .sidebar-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .sidebar-layout__aside {
+    flex: 0 0 16rem;
+  }
+}
+
+/* --- Center: flex-центрирование (для демо позиционирования) --- */
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- Секция страницы --- */
+.section {
+  padding-block: var(--space-10);
+}
+
+.section--hero {
+  background: var(--zone-hero);
+  padding-block: var(--space-12);
+}
+
+.section--grid {
+  background: var(--zone-grid);
+}
+
+/* --- Утилиты видимости --- */
+.is-hidden-mobile {
+  display: none;
+}
+
+.is-hidden-desktop {
+  display: block;
+}
+
+@media (min-width: 48rem) {
+  .is-hidden-mobile {
+    display: block;
+  }
+
+  .is-hidden-desktop {
+    display: none;
+  }
+}
+
+/* --- Утилита: растянуть на всю ширину контейнера --- */
+.full-width {
+  width: 100%;
+}
+
+/* --- Spacer для демо-контента (чтобы страница скроллилась) --- */
+.spacer {
+  height: var(--space-8);
+}
