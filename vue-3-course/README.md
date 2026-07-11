@@ -91,7 +91,7 @@ vue-3-course/
 ## Как учиться
 
 1. Читай `lessons/NN-*/theory.md`.
-2. Открывай и запускай примеры из `examples/`.
+2. Открывай примеры в браузере: `npm run dev` → **Examples** (`/examples`) — живой рендер + исходник с подсветкой.
 3. Запускай тесты: `npx vitest run examples/02-reactivity/001-ref-counter.test.ts`.
 4. В конце — capstone: `npm run dev` → раздел **Task Board** (`/tasks`).
 

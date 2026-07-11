@@ -10,6 +10,16 @@ const router = createRouter({
       component: CourseHomeView,
     },
     {
+      path: '/examples',
+      name: 'examples',
+      component: () => import('../views/ExamplesView.vue'),
+    },
+    {
+      path: '/examples/:module/:file',
+      name: 'example-detail',
+      component: () => import('../views/ExamplesView.vue'),
+    },
+    {
       path: '/tasks',
       name: 'tasks',
       component: () => import('@capstone/views/TaskListView.vue'),
