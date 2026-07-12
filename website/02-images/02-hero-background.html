@@ -1,0 +1,151 @@
+<!--
+  02-images — Hero background
+  Показывает: background-size cover + linear-gradient overlay для читаемости текста.
+  Смотри: текст поверх «фото» остаётся контрастным.
+-->
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02 — Hero background</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      :root {
+        --color-text: #f8fafc;
+        --color-muted: #cbd5e1;
+        --color-accent: #38bdf8;
+        --container-max: 72rem;
+        --gutter: 1rem;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.5;
+        color: var(--color-text);
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .container {
+        width: 100%;
+        max-width: var(--container-max);
+        margin-inline: auto;
+        padding-inline: var(--gutter);
+      }
+
+      /* Hero с фоновым изображением (SVG data-URI — офлайн) */
+      .hero {
+        position: relative;
+        display: flex;
+        align-items: center;
+        min-height: 70vh;
+        background-color: #0f172a;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080' viewBox='0 0 1920 1080'%3E%3Cdefs%3E%3ClinearGradient id='sky' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%231e3a5f'/%3E%3Cstop offset='50%25' stop-color='%23334155'/%3E%3Cstop offset='100%25' stop-color='%23475569'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23sky)' width='1920' height='1080'/%3E%3Ccircle cx='1600' cy='200' r='120' fill='%23fbbf24' opacity='0.6'/%3E%3Cpath d='M0 700 Q480 550 960 680 T1920 620 L1920 1080 L0 1080 Z' fill='%231e293b' opacity='0.5'/%3E%3C/svg%3E");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      /* Overlay — затемнение для контраста текста */
+      .hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          105deg,
+          rgba(15, 23, 42, 0.92) 0%,
+          rgba(15, 23, 42, 0.65) 45%,
+          rgba(15, 23, 42, 0.35) 100%
+        );
+        pointer-events: none;
+      }
+
+      .hero__content {
+        position: relative;
+        z-index: 1;
+        padding-block: 4rem;
+        max-width: 36rem;
+      }
+
+      .hero__eyebrow {
+        margin: 0 0 0.75rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+      }
+
+      .hero__title {
+        margin: 0 0 1rem;
+        font-size: clamp(2rem, 5vw, 3rem);
+        line-height: 1.15;
+      }
+
+      .hero__text {
+        margin: 0 0 2rem;
+        font-size: 1.125rem;
+        color: var(--color-muted);
+      }
+
+      .hero__cta {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        font-weight: 600;
+        color: #0f172a;
+        text-decoration: none;
+        background: var(--color-accent);
+        border-radius: 0.375rem;
+        transition: background 0.2s;
+      }
+
+      .hero__cta:hover {
+        background: #7dd3fc;
+      }
+
+      .note {
+        padding: 2rem;
+        font-size: 0.875rem;
+        color: #64748b;
+        background: #f8fafc;
+      }
+
+      .note code {
+        padding: 0.125rem 0.375rem;
+        font-size: 0.8125rem;
+        background: #e2e8f0;
+        border-radius: 0.25rem;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="container hero__content">
+        <p class="hero__eyebrow">Hero background</p>
+        <h1 class="hero__title">Фон cover + gradient overlay</h1>
+        <p class="hero__text">
+          Декоративное изображение — через background-image. Текст читается
+          благодаря полупрозрачному градиенту поверх фона (::before).
+        </p>
+        <a class="hero__cta" href="#">Начать</a>
+      </div>
+    </section>
+
+    <div class="note container">
+      <strong>Когда background, а не &lt;img&gt;:</strong> картинка декоративная,
+      не несёт смысловой нагрузки для SEO/a11y. Для продуктовых фото — всегда
+      <code>&lt;img alt="..."&gt;</code> с object-fit.
+    </div>
+  </body>
+</html>

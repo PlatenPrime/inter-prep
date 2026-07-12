@@ -1,0 +1,163 @@
+<!--
+  01-container — Full-bleed section
+  Показывает: секция на всю ширину viewport, контент внутри .container.
+  Смотри: тёмный фон секции vs ограниченный текст.
+-->
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02 — Full-bleed section</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      :root {
+        --color-bg: #f8fafc;
+        --color-surface: #ffffff;
+        --color-border: #e2e8f0;
+        --color-dark: #1e293b;
+        --color-dark-text: #f1f5f9;
+        --color-accent: #38bdf8;
+        --color-text: #0f172a;
+        --color-muted: #64748b;
+        --container-max: 72rem;
+        --gutter: 1rem;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.5;
+        color: var(--color-text);
+        background: var(--color-bg);
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .container {
+        width: 100%;
+        max-width: var(--container-max);
+        margin-inline: auto;
+        padding-inline: var(--gutter);
+      }
+
+      .page-header {
+        padding-block: 2rem;
+        background: var(--color-surface);
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .page-header h1 {
+        margin: 0 0 0.5rem;
+        font-size: 1.5rem;
+      }
+
+      .page-header p {
+        margin: 0;
+        color: var(--color-muted);
+        font-size: 0.875rem;
+      }
+
+      /* Обычная секция — контент в контейнере */
+      .section {
+        padding-block: 3rem;
+      }
+
+      .section h2 {
+        margin: 0 0 1rem;
+        font-size: 1.25rem;
+      }
+
+      .section p {
+        margin: 0;
+        color: var(--color-muted);
+      }
+
+      /* Full-bleed: фон на всю ширину, контент — в .container внутри */
+      .section--full-bleed {
+        padding-block: 4rem;
+        color: var(--color-dark-text);
+        background: var(--color-dark);
+      }
+
+      .section--full-bleed h2 {
+        margin: 0 0 1rem;
+        font-size: 1.5rem;
+        color: var(--color-accent);
+      }
+
+      .section--full-bleed p {
+        margin: 0;
+        max-width: 40rem;
+        color: #94a3b8;
+      }
+
+      .diagram {
+        margin-block: 2rem;
+        padding: 1rem;
+        font-size: 0.8125rem;
+        font-family: ui-monospace, monospace;
+        color: var(--color-muted);
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: 0.5rem;
+      }
+
+      .diagram pre {
+        margin: 0;
+        overflow-x: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="container">
+        <h1>02 — Full-bleed section</h1>
+        <p>Фон секции на всю ширину, контент — в контейнере</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        <h2>Обычная секция</h2>
+        <p>
+          Белый фон страницы. Контент ограничен .container. Это базовый паттерн
+          для большинства блоков лендинга.
+        </p>
+      </div>
+    </section>
+
+    <!-- Full-bleed: секция без .container снаружи — фон на 100vw -->
+    <section class="section--full-bleed">
+      <div class="container">
+        <h2>Full-bleed секция</h2>
+        <p>
+          Тёмный фон растянут на всю ширину экрана. Текст и заголовок — внутри
+          .container, поэтому читаемость сохраняется на любом разрешении.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Структура разметки</h2>
+        <div class="diagram">
+          <pre>&lt;section class="section--full-bleed"&gt;  &lt;!-- фон 100% --&gt;
+  &lt;div class="container"&gt;           &lt;!-- контент ограничен --&gt;
+    ...
+  &lt;/div&gt;
+&lt;/section&gt;</pre>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

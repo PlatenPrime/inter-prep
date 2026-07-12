@@ -1,0 +1,199 @@
+<!--
+  06-responsive — Mobile-first
+  Показывает: базовые стили для mobile, min-width медиа для tablet/desktop.
+  Смотри: индикатор breakpoint, перестройка layout.
+-->
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01 — Mobile-first</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      :root {
+        --color-bg: #f8fafc;
+        --color-surface: #ffffff;
+        --color-border: #e2e8f0;
+        --color-text: #0f172a;
+        --color-muted: #64748b;
+        --color-accent: #2563eb;
+        --container-max: 72rem;
+        --gutter: 1rem;
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.5;
+        color: var(--color-text);
+        background: var(--color-bg);
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .container {
+        width: 100%;
+        max-width: var(--container-max);
+        margin-inline: auto;
+        padding-inline: var(--gutter);
+        padding-block: 2rem;
+      }
+
+      h1 {
+        margin: 0 0 0.5rem;
+        font-size: 1.5rem;
+      }
+
+      .subtitle {
+        margin: 0 0 2rem;
+        color: var(--color-muted);
+        font-size: 0.875rem;
+      }
+
+      .breakpoint-badge {
+        display: inline-block;
+        margin-bottom: 2rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        font-family: ui-monospace, monospace;
+        color: #fff;
+        background: #64748b;
+        border-radius: 0.375rem;
+      }
+
+      .breakpoint-badge::after {
+        content: 'mobile (< 640px)';
+      }
+
+      @media (min-width: 640px) {
+        .breakpoint-badge {
+          background: #2563eb;
+        }
+        .breakpoint-badge::after {
+          content: 'sm (≥ 640px)';
+        }
+      }
+
+      @media (min-width: 768px) {
+        .breakpoint-badge {
+          background: #7c3aed;
+        }
+        .breakpoint-badge::after {
+          content: 'md (≥ 768px)';
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .breakpoint-badge {
+          background: #059669;
+        }
+        .breakpoint-badge::after {
+          content: 'lg (≥ 1024px)';
+        }
+      }
+
+      /* Mobile-first: одна колонка */
+      .feature-row {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .feature-card {
+        padding: 1.25rem;
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: 0.5rem;
+      }
+
+      .feature-card h3 {
+        margin: 0 0 0.5rem;
+        font-size: 1rem;
+      }
+
+      .feature-card p {
+        margin: 0;
+        font-size: 0.875rem;
+        color: var(--color-muted);
+      }
+
+      @media (min-width: 640px) {
+        .feature-row {
+          flex-direction: row;
+        }
+
+        .feature-card {
+          flex: 1;
+        }
+      }
+
+      .visibility-demo {
+        padding: 1rem;
+        font-size: 0.875rem;
+        background: #eff6ff;
+        border-radius: 0.5rem;
+      }
+
+      .desktop-only {
+        display: none;
+        color: var(--color-accent);
+        font-weight: 600;
+      }
+
+      .mobile-only {
+        display: block;
+        color: #dc2626;
+        font-weight: 600;
+      }
+
+      @media (min-width: 768px) {
+        .desktop-only {
+          display: block;
+        }
+
+        .mobile-only {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>01 — Mobile-first</h1>
+      <p class="subtitle">Базовые стили для mobile → расширение через min-width</p>
+
+      <div class="breakpoint-badge" aria-live="polite"></div>
+
+      <div class="feature-row">
+        <article class="feature-card">
+          <h3>Feature A</h3>
+          <p>На mobile — колонка. С 640px — в ряд через flex-direction: row.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Feature B</h3>
+          <p>Каждая карточка flex: 1 на tablet+.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Feature C</h3>
+          <p>Измени ширину окна и наблюдай перестройку.</p>
+        </article>
+      </div>
+
+      <div class="visibility-demo">
+        <p class="mobile-only">Видно только на mobile (&lt; 768px)</p>
+        <p class="desktop-only">Видно только на desktop (≥ 768px)</p>
+      </div>
+    </div>
+  </body>
+</html>

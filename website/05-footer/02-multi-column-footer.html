@@ -1,0 +1,193 @@
+<!--
+  05-footer — Multi-column footer
+  Показывает: grid auto-fit minmax для колонок ссылок + copyright bar.
+  Смотри: колонки перестраиваются при изменении ширины окна.
+-->
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02 — Multi-column footer</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      :root {
+        --color-bg: #f8fafc;
+        --color-text: #0f172a;
+        --color-muted: #64748b;
+        --color-footer-bg: #0f172a;
+        --color-footer-heading: #f1f5f9;
+        --color-footer-link: #94a3b8;
+        --color-footer-border: #334155;
+        --container-max: 72rem;
+        --gutter: 1rem;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100dvh;
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.5;
+        color: var(--color-text);
+        background: var(--color-bg);
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .container {
+        width: 100%;
+        max-width: var(--container-max);
+        margin-inline: auto;
+        padding-inline: var(--gutter);
+      }
+
+      .page-content {
+        padding-block: 3rem;
+      }
+
+      .page-content h1 {
+        margin: 0 0 0.5rem;
+        font-size: 1.5rem;
+      }
+
+      .page-content p {
+        margin: 0;
+        color: var(--color-muted);
+      }
+
+      .site-footer {
+        padding-block: 3rem 1.5rem;
+        color: var(--color-footer-link);
+        background: var(--color-footer-bg);
+      }
+
+      .footer__grid {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+      }
+
+      .footer__brand {
+        grid-column: 1 / -1;
+      }
+
+      @media (min-width: 640px) {
+        .footer__brand {
+          grid-column: auto;
+        }
+      }
+
+      .footer__logo {
+        margin: 0 0 0.5rem;
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: var(--color-footer-heading);
+      }
+
+      .footer__tagline {
+        margin: 0;
+        font-size: 0.875rem;
+      }
+
+      .footer__heading {
+        margin: 0 0 1rem;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--color-footer-heading);
+      }
+
+      .footer__links {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .footer__links li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer__links a {
+        display: inline-block;
+        padding-block: 0.25rem;
+        font-size: 0.9375rem;
+        color: var(--color-footer-link);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .footer__links a:hover {
+        color: var(--color-footer-heading);
+      }
+
+      .footer__bottom {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        font-size: 0.875rem;
+        text-align: center;
+        border-top: 1px solid var(--color-footer-border);
+      }
+
+      .footer__bottom p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container page-content">
+      <h1>Multi-column footer</h1>
+      <p>Прокрути вниз — футер с колонками ссылок. Измени ширину окна.</p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <p class="footer__logo">Acme</p>
+            <p class="footer__tagline">Building better landing pages.</p>
+          </div>
+
+          <div>
+            <h3 class="footer__heading">Product</h3>
+            <ul class="footer__links">
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Integrations</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer__heading">Company</h3>
+            <ul class="footer__links">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer__heading">Legal</h3>
+            <ul class="footer__links">
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Cookies</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p>© 2026 Acme Inc. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

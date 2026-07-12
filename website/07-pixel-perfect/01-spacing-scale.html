@@ -1,0 +1,259 @@
+<!--
+  07-pixel-perfect — Spacing scale
+  Показывает: design tokens (--space-*), box-sizing, консистентные отступы.
+  Смотри: все отступы кратны шкале, элементы выровнены по сетке.
+-->
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01 — Spacing scale</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      :root {
+        /* Spacing scale — единственный источник отступов */
+        --space-1: 0.25rem;
+        --space-2: 0.5rem;
+        --space-3: 0.75rem;
+        --space-4: 1rem;
+        --space-5: 1.25rem;
+        --space-6: 1.5rem;
+        --space-8: 2rem;
+        --space-10: 2.5rem;
+        --space-12: 3rem;
+        --space-16: 4rem;
+
+        --color-bg: #f8fafc;
+        --color-surface: #ffffff;
+        --color-border: #e2e8f0;
+        --color-text: #0f172a;
+        --color-muted: #64748b;
+        --color-accent: #2563eb;
+        --color-scale: #dbeafe;
+        --container-max: 72rem;
+        --gutter: var(--space-4);
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.5;
+        color: var(--color-text);
+        background: var(--color-bg);
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .container {
+        width: 100%;
+        max-width: var(--container-max);
+        margin-inline: auto;
+        padding-inline: var(--gutter);
+        padding-block: var(--space-8);
+      }
+
+      h1 {
+        margin: 0 0 var(--space-2);
+        font-size: 1.5rem;
+      }
+
+      .subtitle {
+        margin: 0 0 var(--space-8);
+        color: var(--color-muted);
+        font-size: 0.875rem;
+      }
+
+      /* Визуализация шкалы */
+      .scale-section {
+        margin-bottom: var(--space-12);
+      }
+
+      .scale-section h2 {
+        margin: 0 0 var(--space-4);
+        font-size: 1.125rem;
+      }
+
+      .scale-list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-3);
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .scale-item {
+        display: flex;
+        align-items: center;
+        gap: var(--space-4);
+        font-size: 0.8125rem;
+        font-family: ui-monospace, monospace;
+      }
+
+      .scale-bar {
+        flex-shrink: 0;
+        height: var(--space-4);
+        background: var(--color-accent);
+        border-radius: 2px;
+      }
+
+      .scale-item[data-space='1'] .scale-bar { width: var(--space-1); }
+      .scale-item[data-space='2'] .scale-bar { width: var(--space-2); }
+      .scale-item[data-space='3'] .scale-bar { width: var(--space-3); }
+      .scale-item[data-space='4'] .scale-bar { width: var(--space-4); }
+      .scale-item[data-space='6'] .scale-bar { width: var(--space-6); }
+      .scale-item[data-space='8'] .scale-bar { width: var(--space-8); }
+      .scale-item[data-space='12'] .scale-bar { width: var(--space-12); }
+      .scale-item[data-space='16'] .scale-bar { width: var(--space-16); }
+
+      /* Demo card — все отступы из шкалы */
+      .demo-card {
+        padding: var(--space-6);
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--space-2);
+      }
+
+      .demo-card__header {
+        display: flex;
+        align-items: center;
+        gap: var(--space-4);
+        margin-bottom: var(--space-4);
+        padding-bottom: var(--space-4);
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .demo-card__avatar {
+        width: var(--space-10);
+        height: var(--space-10);
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        border-radius: var(--space-2);
+      }
+
+      .demo-card__title {
+        margin: 0;
+        font-size: 1rem;
+      }
+
+      .demo-card__meta {
+        margin: var(--space-1) 0 0;
+        font-size: 0.8125rem;
+        color: var(--color-muted);
+      }
+
+      .demo-card__body {
+        margin: 0 0 var(--space-4);
+        font-size: 0.9375rem;
+        color: var(--color-muted);
+      }
+
+      .demo-card__actions {
+        display: flex;
+        gap: var(--space-3);
+      }
+
+      .btn {
+        padding: var(--space-2) var(--space-4);
+        font-size: 0.875rem;
+        font-weight: 600;
+        border: none;
+        border-radius: var(--space-1);
+        cursor: pointer;
+      }
+
+      .btn--primary {
+        color: #fff;
+        background: var(--color-accent);
+      }
+
+      .btn--ghost {
+        color: var(--color-muted);
+        background: var(--color-bg);
+      }
+
+      .checklist {
+        margin-top: var(--space-8);
+        padding: var(--space-4);
+        font-size: 0.875rem;
+        background: #ecfdf5;
+        border-radius: var(--space-2);
+      }
+
+      .checklist h3 {
+        margin: 0 0 var(--space-2);
+        font-size: 0.9375rem;
+      }
+
+      .checklist ul {
+        margin: 0;
+        padding-left: var(--space-5);
+        color: var(--color-muted);
+      }
+
+      .checklist li {
+        margin-bottom: var(--space-1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>01 — Spacing scale</h1>
+      <p class="subtitle">Design tokens + box-sizing — основа пиксель-перфекта</p>
+
+      <section class="scale-section">
+        <h2>Шкала отступов</h2>
+        <ul class="scale-list">
+          <li class="scale-item" data-space="1"><span class="scale-bar"></span> --space-1 · 0.25rem · 4px</li>
+          <li class="scale-item" data-space="2"><span class="scale-bar"></span> --space-2 · 0.5rem · 8px</li>
+          <li class="scale-item" data-space="3"><span class="scale-bar"></span> --space-3 · 0.75rem · 12px</li>
+          <li class="scale-item" data-space="4"><span class="scale-bar"></span> --space-4 · 1rem · 16px</li>
+          <li class="scale-item" data-space="6"><span class="scale-bar"></span> --space-6 · 1.5rem · 24px</li>
+          <li class="scale-item" data-space="8"><span class="scale-bar"></span> --space-8 · 2rem · 32px</li>
+          <li class="scale-item" data-space="12"><span class="scale-bar"></span> --space-12 · 3rem · 48px</li>
+          <li class="scale-item" data-space="16"><span class="scale-bar"></span> --space-16 · 4rem · 64px</li>
+        </ul>
+      </section>
+
+      <section class="scale-section">
+        <h2>Карточка на шкале</h2>
+        <article class="demo-card">
+          <div class="demo-card__header">
+            <div class="demo-card__avatar" aria-hidden="true"></div>
+            <div>
+              <h3 class="demo-card__title">Все отступы из --space-*</h3>
+              <p class="demo-card__meta">padding, gap, margin — только токены</p>
+            </div>
+          </div>
+          <p class="demo-card__body">
+            Открой DevTools и проверь computed padding/margin — каждое значение
+            кратно шкале. Никаких 17px или 23px.
+          </p>
+          <div class="demo-card__actions">
+            <button type="button" class="btn btn--primary">Action</button>
+            <button type="button" class="btn btn--ghost">Cancel</button>
+          </div>
+        </article>
+      </section>
+
+      <div class="checklist">
+        <h3>Чеклист пиксель-перфекта</h3>
+        <ul>
+          <li>box-sizing: border-box на всех элементах</li>
+          <li>Один .container с одинаковыми gutters</li>
+          <li>Отступы только из spacing scale</li>
+          <li>Сверка line-height и font-size с макетом</li>
+          <li>Overlay макета в DevTools / PerfectPixel</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

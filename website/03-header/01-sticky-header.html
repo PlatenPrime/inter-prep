@@ -1,0 +1,200 @@
+<!--
+  03-header — Sticky header
+  Показывает: flex navbar (logo + nav + CTA), position sticky при скролле.
+  Смотри: прокрути вниз — хедер остаётся сверху.
+-->
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01 — Sticky header</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      :root {
+        --color-bg: #f8fafc;
+        --color-surface: #ffffff;
+        --color-border: #e2e8f0;
+        --color-text: #0f172a;
+        --color-muted: #64748b;
+        --color-accent: #2563eb;
+        --container-max: 72rem;
+        --gutter: 1rem;
+        --header-height: 4rem;
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.5;
+        color: var(--color-text);
+        background: var(--color-bg);
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .container {
+        width: 100%;
+        max-width: var(--container-max);
+        margin-inline: auto;
+        padding-inline: var(--gutter);
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: var(--color-surface);
+        border-bottom: 1px solid var(--color-border);
+        box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+      }
+
+      .site-header__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        min-height: var(--header-height);
+      }
+
+      .logo {
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: var(--color-text);
+        text-decoration: none;
+      }
+
+      .nav {
+        display: flex;
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .nav a {
+        font-size: 0.9375rem;
+        font-weight: 500;
+        color: var(--color-muted);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .nav a:hover {
+        color: var(--color-text);
+      }
+
+      .cta {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: #fff;
+        text-decoration: none;
+        background: var(--color-accent);
+        border-radius: 0.375rem;
+        transition: background 0.2s;
+      }
+
+      .cta:hover {
+        background: #1d4ed8;
+      }
+
+      .hero {
+        padding-block: 4rem;
+        text-align: center;
+        background: linear-gradient(180deg, #eff6ff 0%, var(--color-bg) 100%);
+      }
+
+      .hero h1 {
+        margin: 0 0 1rem;
+        font-size: clamp(1.75rem, 4vw, 2.5rem);
+      }
+
+      .hero p {
+        margin: 0 auto;
+        max-width: 32rem;
+        color: var(--color-muted);
+      }
+
+      .content-block {
+        padding-block: 3rem;
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .content-block:nth-child(even) {
+        background: var(--color-surface);
+      }
+
+      .content-block h2 {
+        margin: 0 0 0.75rem;
+        font-size: 1.25rem;
+      }
+
+      .content-block p {
+        margin: 0;
+        color: var(--color-muted);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="logo" href="#">Acme</a>
+        <ul class="nav">
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+        <a class="cta" href="#">Sign up</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h1>Sticky header</h1>
+        <p>Прокрути страницу вниз — хедер останется сверху благодаря position: sticky.</p>
+      </div>
+    </section>
+
+    <main>
+      <section class="content-block">
+        <div class="container">
+          <h2>Секция 1</h2>
+          <p>Контент для демонстрации скролла. Хедер не перекрывает начало страницы, потому что sticky не вырывает элемент из потока.</p>
+        </div>
+      </section>
+      <section class="content-block">
+        <div class="container">
+          <h2>Секция 2</h2>
+          <p>Обрати внимание на background и z-index у хедера — без них контент «просвечивает» при скролле.</p>
+        </div>
+      </section>
+      <section class="content-block">
+        <div class="container">
+          <h2>Секция 3</h2>
+          <p>Flex-раскладка: logo слева, nav по центру, CTA справа через justify-content: space-between.</p>
+        </div>
+      </section>
+      <section class="content-block">
+        <div class="container">
+          <h2>Секция 4</h2>
+          <p>Ещё контент для скролла.</p>
+        </div>
+      </section>
+      <section class="content-block">
+        <div class="container">
+          <h2>Секция 5</h2>
+          <p>На узком экране nav может не поместиться — см. следующий пример с бургером.</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

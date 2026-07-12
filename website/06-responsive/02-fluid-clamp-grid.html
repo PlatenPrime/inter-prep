@@ -1,0 +1,185 @@
+<!--
+  06-responsive — Fluid clamp + grid
+  Показывает: clamp() для типографики/отступов + auto-fit minmax grid.
+  Смотри: плавное изменение размеров без резких скачков.
+-->
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02 — Fluid clamp + grid</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      :root {
+        --color-bg: #f8fafc;
+        --color-surface: #ffffff;
+        --color-border: #e2e8f0;
+        --color-text: #0f172a;
+        --color-muted: #64748b;
+        --color-accent: #2563eb;
+        --container-max: 72rem;
+        --gutter: clamp(1rem, 3vw, 2rem);
+
+        /* Fluid tokens */
+        --text-base: clamp(0.9375rem, 0.9rem + 0.2vw, 1rem);
+        --text-lg: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+        --text-xl: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+        --space-section: clamp(2rem, 5vw, 4rem);
+        --space-card: clamp(1rem, 2vw, 1.5rem);
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        font-size: var(--text-base);
+        line-height: 1.5;
+        color: var(--color-text);
+        background: var(--color-bg);
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .container {
+        width: 100%;
+        max-width: var(--container-max);
+        margin-inline: auto;
+        padding-inline: var(--gutter);
+      }
+
+      .hero {
+        padding-block: var(--space-section);
+        text-align: center;
+      }
+
+      .hero h1 {
+        margin: 0 0 1rem;
+        font-size: clamp(2rem, 4vw + 1rem, 3.5rem);
+        line-height: 1.15;
+      }
+
+      .hero p {
+        margin: 0 auto;
+        max-width: 40rem;
+        font-size: var(--text-lg);
+        color: var(--color-muted);
+      }
+
+      .section {
+        padding-block: var(--space-section);
+      }
+
+      .section-title {
+        margin: 0 0 var(--space-card);
+        font-size: var(--text-xl);
+      }
+
+      /* Fluid grid — без media queries */
+      .card-grid {
+        display: grid;
+        gap: var(--space-card);
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+      }
+
+      .card {
+        padding: var(--space-card);
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: 0.5rem;
+        transition: box-shadow 0.2s;
+      }
+
+      .card:hover {
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+      }
+
+      .card__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-bottom: 0.75rem;
+        font-size: 1.25rem;
+        background: #eff6ff;
+        border-radius: 0.375rem;
+      }
+
+      .card h3 {
+        margin: 0 0 0.5rem;
+        font-size: var(--text-lg);
+      }
+
+      .card p {
+        margin: 0;
+        font-size: var(--text-base);
+        color: var(--color-muted);
+      }
+
+      .tokens {
+        margin-top: var(--space-section);
+        padding: var(--space-card);
+        font-size: 0.8125rem;
+        font-family: ui-monospace, monospace;
+        color: var(--color-muted);
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: 0.5rem;
+      }
+
+      .tokens pre {
+        margin: 0;
+        overflow-x: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero container">
+      <h1>Fluid clamp + grid</h1>
+      <p>
+        Заголовок и отступы плавно масштабируются через clamp().
+        Сетка карточек — auto-fit minmax без жёстких breakpoints.
+      </p>
+    </section>
+
+    <section class="section container">
+      <h2 class="section-title">Features</h2>
+      <div class="card-grid">
+        <article class="card">
+          <div class="card__icon">⚡</div>
+          <h3>Fast</h3>
+          <p>Карточки перестраиваются автоматически.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">📐</div>
+          <h3>Fluid</h3>
+          <p>clamp() вместо фиксированных px.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">🎯</div>
+          <h3>Precise</h3>
+          <p>minmax(min(100%, 16rem), 1fr) — без overflow.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">📱</div>
+          <h3>Responsive</h3>
+          <p>1–4 колонки в зависимости от ширины.</p>
+        </article>
+      </div>
+
+      <div class="tokens">
+        <pre>--text-xl: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+--space-section: clamp(2rem, 5vw, 4rem);
+grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));</pre>
+      </div>
+    </section>
+  </body>
+</html>

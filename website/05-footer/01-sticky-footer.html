@@ -1,0 +1,135 @@
+<!--
+  05-footer — Sticky footer
+  Показывает: body flex column + main flex:1 — футер внизу при малом контенте.
+  Смотри: мало контента, но футер прижат к низу viewport.
+-->
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01 — Sticky footer</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      :root {
+        --color-bg: #f8fafc;
+        --color-surface: #ffffff;
+        --color-border: #e2e8f0;
+        --color-text: #0f172a;
+        --color-muted: #64748b;
+        --color-footer-bg: #1e293b;
+        --color-footer-text: #94a3b8;
+        --container-max: 72rem;
+        --gutter: 1rem;
+      }
+
+      html {
+        height: 100%;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100dvh;
+        margin: 0;
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.5;
+        color: var(--color-text);
+        background: var(--color-bg);
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .container {
+        width: 100%;
+        max-width: var(--container-max);
+        margin-inline: auto;
+        padding-inline: var(--gutter);
+      }
+
+      .site-header {
+        padding-block: 1rem;
+        background: var(--color-surface);
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .site-header h1 {
+        margin: 0;
+        font-size: 1.25rem;
+      }
+
+      /* Ключ: main растягивается и выталкивает footer вниз */
+      main {
+        flex: 1;
+        padding-block: 2rem;
+      }
+
+      main p {
+        margin: 0;
+        color: var(--color-muted);
+      }
+
+      .site-footer {
+        padding-block: 1.5rem;
+        color: var(--color-footer-text);
+        background: var(--color-footer-bg);
+      }
+
+      .site-footer p {
+        margin: 0;
+        font-size: 0.875rem;
+        text-align: center;
+      }
+
+      .diagram {
+        margin-top: 1.5rem;
+        padding: 1rem;
+        font-size: 0.8125rem;
+        font-family: ui-monospace, monospace;
+        color: var(--color-muted);
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: 0.5rem;
+      }
+
+      .diagram pre {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1>Sticky footer</h1>
+      </div>
+    </header>
+
+    <main class="container">
+      <p>
+        Контента мало — всего один абзац. Но футер прижат к низу экрана благодаря
+        <code>body { display: flex; flex-direction: column; min-height: 100dvh }</code>
+        и <code>main { flex: 1 }</code>.
+      </p>
+      <div class="diagram">
+        <pre>body (flex column, min-height: 100dvh)
+├── header
+├── main (flex: 1)  ← растягивается
+└── footer          ← всегда внизу</pre>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2026 Acme. Sticky footer demo.</p>
+      </div>
+    </footer>
+  </body>
+</html>
